@@ -11,7 +11,7 @@
 #import <Photos/Photos.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "ZJModuleDefine.h"
-
+#import <UIKit/UIKit.h>
 #define iOS8  ([[UIDevice currentDevice].systemVersion doubleValue] >= 8)
 
 static ZJSetAuthManager *instance;
