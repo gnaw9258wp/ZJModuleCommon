@@ -11,6 +11,7 @@
 
 
 @interface ZJNavigationController : UINavigationController
-
+@property (nonatomic,copy)NSString *backImage;
+@property (nonatomic,copy)NSString *whiteBackImage;
 @end
 

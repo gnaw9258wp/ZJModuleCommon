@@ -8,18 +8,22 @@
 #import "DeviceInfo.h"
 #import "UIImage+Color.h"
 #import "UIColor+HEX.h"
+
 @interface ZJNavigationController ()<UINavigationBarDelegate, UIGestureRecognizerDelegate, UINavigationControllerDelegate>
+
 @property (nonatomic,strong) UIBarButtonItem *back;
+
 @property (nonatomic,strong) UIBarButtonItem *whiteBack;
+
 @property (nonatomic,assign) BOOL isCannotPush;
+
 @end
 
 @implementation ZJNavigationController
 
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
     if (self = [super initWithRootViewController:rootViewController]) {
-        if ([rootViewController isKindOfClass:NSClassFromString(@"ViewController")]) {
-        }
+
     }
     return self;
 }
@@ -53,6 +57,8 @@
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     //导航栏标题处理
+    [self setNavigationBarHidden:[viewController bg_prefresHiddenNavigationBar] animated:animated];
+
     if (viewController.bg_titleTextAttributes) {
         [self.navigationBar setTitleTextAttributes:viewController.bg_titleTextAttributes];
     } else {
@@ -67,36 +73,6 @@
                 [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:18]}];
             }
         }
-
-    }
-
-    if ([viewController bg_prefresHiddenNavigationBar] == YES) {
-        return;
-    }
-    
-    if ([viewController bg_navType] == NavTypeNormal)
-    {
-        UIImage *whiteImage = [UIImage imageWithColor:[UIColor redColor]];
-        [self.navigationController.navigationBar setBackgroundImage:whiteImage forBarMetrics:UIBarMetricsDefault];
-        if (self.bg_lineColor) {
-            UIImage *lineImage = [UIImage imageWithColor:self.bg_lineColor];
-            [viewController.navigationController.navigationController.navigationBar setShadowImage:lineImage];
-        }else {
-            UIImage *lineImage = [UIImage imageWithColor:[UIColor colorWithHexString:@"#E2E2E2" alpha:1]];
-            [viewController.navigationController.navigationBar setShadowImage:lineImage];
-        }
-    }else if ([viewController bg_navType] == NavTypeBlue)
-    {
-        UIImage *blueImage = [UIImage imageWithColor:[UIColor blueColor]];
-        [viewController.navigationController.navigationBar setBackgroundImage:blueImage forBarMetrics:UIBarMetricsDefault];
-        [viewController.navigationController.navigationBar setShadowImage:[UIImage new]];
-    }else if ([viewController bg_navType] == NavTypeClear)
-    {
-        viewController.navigationController.navigationBar.translucent = YES;
-        viewController.navigationController.navigationBar.barTintColor = UIColor.clearColor;
-        UIImage *clearImage = [UIImage imageWithColor:[UIColor clearColor]];
-        [viewController.navigationController.navigationBar setBackgroundImage:clearImage forBarMetrics:UIBarMetricsDefault];
-        [viewController.navigationController.navigationBar setShadowImage:[UIImage new]];
     }
 }
 
@@ -159,7 +135,7 @@
 }
 
 #pragma mark - events Methods
-- (void)backAction {
+- (void)backAction{
     if ([self.topViewController respondsToSelector:@selector(bg_backButtonAction)]) {
         [self.topViewController performSelector:@selector(bg_backButtonAction)];
     } else {
@@ -208,7 +184,7 @@
 - (UIBarButtonItem *)back {
     if (_back == nil) {
         UIButton  *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [leftButton setImage:[UIImage imageNamed:@"back"]  forState:UIControlStateNormal];
+        [leftButton setImage:[UIImage imageNamed:self.backImage ? self.backImage : @"back"]  forState:UIControlStateNormal];
         leftButton.backgroundColor = [UIColor clearColor];
         leftButton.frame = CGRectMake(0, 0, 30, 30);
         [leftButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
@@ -223,7 +199,7 @@
         UIButton  *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
         leftButton.frame = CGRectMake(0, 0, 30, 30);
         leftButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
-        [leftButton setImage:[UIImage imageNamed:@"whiteBack"]  forState:UIControlStateNormal];
+        [leftButton setImage:[UIImage imageNamed:self.whiteBackImage ? self.whiteBackImage : @"whiteBack"]  forState:UIControlStateNormal];
         leftButton.backgroundColor = [UIColor clearColor];
         _whiteBack = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
         [leftButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];

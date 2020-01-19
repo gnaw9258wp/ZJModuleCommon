@@ -66,7 +66,7 @@
 //默认导航条背景色
 - (NavType)bg_navType
 {
-    return NavTypeBlue;
+    return NavTypeNormal;
 }
 
 - (UIStatusBarStyle)bg_StatusBarStyle

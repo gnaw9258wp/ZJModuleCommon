@@ -50,4 +50,6 @@
  */
 + (UIImage*)covertToGrayImageFromImage:(UIImage*)sourceImage;
 
+
++ (UIImage *)imageFromColor:(UIColor *)color size:(CGSize)size;
 @end

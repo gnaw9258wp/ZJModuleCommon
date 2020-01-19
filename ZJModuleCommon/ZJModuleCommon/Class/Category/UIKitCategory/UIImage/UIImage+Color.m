@@ -171,5 +171,13 @@
     return grayImage;
 }
 
-
++ (UIImage *)imageFromColor:(UIColor *)color size:(CGSize)size {
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [color setFill];
+    CGContextFillRect(ctx, (CGRect){{0, 0}, size});
+    UIImage *imgNew = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return imgNew;
+}
 @end

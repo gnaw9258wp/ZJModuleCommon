@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A95D154EBFEFB6DB2BD673C0 /* libPods-ZJModuleCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91920B88297BF87A329C1A95 /* libPods-ZJModuleCommon.a */; };
+		F74DBB4B23D443C0003DB35C /* ZJSetAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F74DBB4923D443C0003DB35C /* ZJSetAuthManager.m */; };
 		F7D91D8A23D1465100545DC3 /* ZJReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D91D8923D1465100545DC3 /* ZJReachabilityManager.m */; };
 		F7F9C51923D05C5700C50492 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F9C51823D05C5700C50492 /* AppDelegate.m */; };
 		F7F9C51C23D05C5700C50492 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F9C51B23D05C5700C50492 /* SceneDelegate.m */; };
@@ -99,6 +100,9 @@
 		91920B88297BF87A329C1A95 /* libPods-ZJModuleCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZJModuleCommon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE656583478BFD4CD57A4005 /* Pods-ZJModuleCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJModuleCommon.release.xcconfig"; path = "Target Support Files/Pods-ZJModuleCommon/Pods-ZJModuleCommon.release.xcconfig"; sourceTree = "<group>"; };
 		DE6A51D0B8768554004AC5C5 /* Pods-ZJModuleCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJModuleCommon.debug.xcconfig"; path = "Target Support Files/Pods-ZJModuleCommon/Pods-ZJModuleCommon.debug.xcconfig"; sourceTree = "<group>"; };
+		F74DBB1B23D3E3C1003DB35C /* ZJModuleDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJModuleDefine.h; sourceTree = "<group>"; };
+		F74DBB4923D443C0003DB35C /* ZJSetAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSetAuthManager.m; sourceTree = "<group>"; };
+		F74DBB4A23D443C0003DB35C /* ZJSetAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSetAuthManager.h; sourceTree = "<group>"; };
 		F7D91D8823D1465100545DC3 /* ZJReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJReachabilityManager.h; sourceTree = "<group>"; };
 		F7D91D8923D1465100545DC3 /* ZJReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJReachabilityManager.m; sourceTree = "<group>"; };
 		F7F9C51423D05C5700C50492 /* ZJModuleCommon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJModuleCommon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,6 +300,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F74DBB1A23D3E3B1003DB35C /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				F74DBB1B23D3E3C1003DB35C /* ZJModuleDefine.h */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		F74DBB4823D443C0003DB35C /* ZJSetAuthManager */ = {
+			isa = PBXGroup;
+			children = (
+				F74DBB4923D443C0003DB35C /* ZJSetAuthManager.m */,
+				F74DBB4A23D443C0003DB35C /* ZJSetAuthManager.h */,
+			);
+			path = ZJSetAuthManager;
+			sourceTree = "<group>";
+		};
 		F7F9C50B23D05C5700C50492 = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +357,8 @@
 		F7F9C53023D05D0000C50492 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				F74DBB4823D443C0003DB35C /* ZJSetAuthManager */,
+				F74DBB1A23D3E3B1003DB35C /* Define */,
 				F7F9C72223D07BD600C50492 /* BaseVC */,
 				F7F9C70623D071A900C50492 /* Environment */,
 				F7F9C61C23D06F8100C50492 /* Category */,
@@ -854,6 +877,7 @@
 				F7F9C6CD23D06F8200C50492 /* UIImage+Color.m in Sources */,
 				F7F9C6CF23D06F8200C50492 /* UIImage+FX.m in Sources */,
 				F7F9C6D623D06F8200C50492 /* UIApplication+ApplicationSize.m in Sources */,
+				F74DBB4B23D443C0003DB35C /* ZJSetAuthManager.m in Sources */,
 				F7F9C6E223D06F8200C50492 /* UIWebView+Load.m in Sources */,
 				F7F9C6DC23D06F8200C50492 /* UIButton+TouchAreaInsets.m in Sources */,
 				F7F9C70C23D072D200C50492 /* ZJNavigationController.m in Sources */,

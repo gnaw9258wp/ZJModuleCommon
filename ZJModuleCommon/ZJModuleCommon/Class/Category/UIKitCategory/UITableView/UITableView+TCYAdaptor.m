@@ -44,7 +44,7 @@ static NSString *nameWithTcyAdjustedContentInsetDidChange = @"nameWithTcyAdjuste
     {
         return;
     }
-    if ([self respondsToSelector:@selector(safeAreaLayoutGuide)] && [[UIScreen mainScreen] bounds].size.height == 812)
+    if ([self respondsToSelector:@selector(safeAreaLayoutGuide)])
     {
         [self mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.superview.mas_safeAreaLayoutGuideTop);
