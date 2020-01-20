@@ -10,6 +10,10 @@
 
 static ZJEnvironmentManager* instance = nil;
 
+@interface ZJEnvironmentManager ()
+
+@end
+
 @implementation ZJEnvironmentManager
 
 + (ZJEnvironmentManager *)shareInstance{
@@ -25,11 +29,23 @@ static ZJEnvironmentManager* instance = nil;
     NSString *address = @"";
     if (self.environmentType == EnvironmentTypeRelease)
     {
-        address = @"https://imoa.gmcc.net:8081/gmccservice/";
+        address = self.addressModel.releaseAddress;
     }else if (self.environmentType == EnvironmentTypeTesting)
     {
-        address = @"http://211.136.253.217:18088/gmccservice/";
+        address = self.addressModel.testAddress;
+    }else if (self.environmentType == EnvironmentTypeGrayScale)
+    {
+        address = self.addressModel.grayScaleAddress;
+    }else if (self.environmentType == EnvironmentTypeCustom)
+    {
+        address = self.addressModel.customAddress;
     }
     return address;
 }
+
+@end
+
+
+@implementation ZJEnvironmentRequestBaseAddress
+
 @end
