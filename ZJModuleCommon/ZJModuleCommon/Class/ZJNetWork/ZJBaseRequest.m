@@ -1,5 +1,5 @@
 //
-//  BGOBaseRequest.m
+//  ZJBaseRequest.m
 //  YTNetWorkDemo
 //
 //  Created by wp on 2019/2/21.
@@ -96,7 +96,7 @@
     return 10;
 }
 
-- (void)ZJ_StartRequestWithCompletionBlockWithSuccess:(BGORequestSuccessBlock)success failure:(BGORequestFailBlock)failure {
+- (void)ZJ_StartRequestWithCompletionBlockWithSuccess:(ZJRequestSuccessBlock)success failure:(ZJRequestFailBlock)failure{
     [self stop];
     __weak ZJBaseRequest *weakSelf = self;
     [self startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {

@@ -1,5 +1,5 @@
 //
-//  BGOBaseRequest.h
+//  ZJBaseRequest.h
 //  YTNetWorkDemo
 //
 //  Created by wp on 2019/2/21.
@@ -7,8 +7,8 @@
 //
 #import <Foundation/Foundation.h>
 
-typedef void (^BGORequestSuccessBlock)(id result);
-typedef void(^BGORequestFailBlock)(NSString *message,NSString *statusCode,NSError *error);
+typedef void (^ZJRequestSuccessBlock)(id result);
+typedef void(^ZJRequestFailBlock)(NSString *message,NSString *statusCode,NSError *error);
 
 #define RequestSuccessStatus @"4000"
 
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)NSString *action;
 @property (nonatomic,strong)NSString *reqId;
 
-- (void)ZJ_StartRequestWithCompletionBlockWithSuccess:(BGORequestSuccessBlock)success failure:(BGORequestFailBlock)failure;
+- (void)ZJ_StartRequestWithCompletionBlockWithSuccess:(ZJRequestSuccessBlock)success failure:(ZJRequestFailBlock)failure;
 
 @end
 

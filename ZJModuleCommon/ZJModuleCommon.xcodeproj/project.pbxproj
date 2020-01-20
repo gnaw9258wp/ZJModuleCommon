@@ -103,6 +103,7 @@
 		F74DBB1B23D3E3C1003DB35C /* ZJModuleDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJModuleDefine.h; sourceTree = "<group>"; };
 		F74DBB4923D443C0003DB35C /* ZJSetAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSetAuthManager.m; sourceTree = "<group>"; };
 		F74DBB4A23D443C0003DB35C /* ZJSetAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSetAuthManager.h; sourceTree = "<group>"; };
+		F7CF326223D5364000A22A2A /* ZJModuleCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJModuleCommon.h; sourceTree = "<group>"; };
 		F7D91D8823D1465100545DC3 /* ZJReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJReachabilityManager.h; sourceTree = "<group>"; };
 		F7D91D8923D1465100545DC3 /* ZJReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJReachabilityManager.m; sourceTree = "<group>"; };
 		F7F9C51423D05C5700C50492 /* ZJModuleCommon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJModuleCommon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				F74DBB1B23D3E3C1003DB35C /* ZJModuleDefine.h */,
+				F7CF326223D5364000A22A2A /* ZJModuleCommon.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -425,21 +427,21 @@
 			isa = PBXGroup;
 			children = (
 				F7F9C62823D06F8100C50492 /* NSString+Contains.h */,
-				F7F9C62923D06F8100C50492 /* NSString+Trims.h */,
-				F7F9C62A23D06F8100C50492 /* NSString+RegexCategory.m */,
-				F7F9C62B23D06F8100C50492 /* NSString+UrlEncode.h */,
+				F7F9C63023D06F8100C50492 /* NSString+Contains.m */,
+				F7F9C63623D06F8100C50492 /* NSString+Emoji.h */,
 				F7F9C62C23D06F8100C50492 /* NSString+Emoji.m */,
 				F7F9C62D23D06F8100C50492 /* NSString+MIME.h */,
-				F7F9C62E23D06F8100C50492 /* NSString+Size.h */,
-				F7F9C62F23D06F8100C50492 /* NSString+RemoveEmoji.m */,
-				F7F9C63023D06F8100C50492 /* NSString+Contains.m */,
-				F7F9C63123D06F8100C50492 /* NSString+Trims.m */,
-				F7F9C63223D06F8100C50492 /* NSString+UrlEncode.m */,
-				F7F9C63323D06F8100C50492 /* NSString+RegexCategory.h */,
-				F7F9C63423D06F8100C50492 /* NSString+RemoveEmoji.h */,
-				F7F9C63523D06F8100C50492 /* NSString+Size.m */,
-				F7F9C63623D06F8100C50492 /* NSString+Emoji.h */,
 				F7F9C63723D06F8100C50492 /* NSString+MIME.m */,
+				F7F9C63323D06F8100C50492 /* NSString+RegexCategory.h */,
+				F7F9C62A23D06F8100C50492 /* NSString+RegexCategory.m */,
+				F7F9C63423D06F8100C50492 /* NSString+RemoveEmoji.h */,
+				F7F9C62F23D06F8100C50492 /* NSString+RemoveEmoji.m */,
+				F7F9C62E23D06F8100C50492 /* NSString+Size.h */,
+				F7F9C63523D06F8100C50492 /* NSString+Size.m */,
+				F7F9C62923D06F8100C50492 /* NSString+Trims.h */,
+				F7F9C63123D06F8100C50492 /* NSString+Trims.m */,
+				F7F9C62B23D06F8100C50492 /* NSString+UrlEncode.h */,
+				F7F9C63223D06F8100C50492 /* NSString+UrlEncode.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
