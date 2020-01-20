@@ -37,16 +37,6 @@
     return YTKRequestSerializerTypeJSON;
 }
 
--(BOOL)needSecurity
-{
-    return NO;
-}
-
-- (BOOL)addCommomValues
-{
-    return YES;
-}
-
 - (id)requestArgument {
     NSMutableDictionary *mdic = [[NSMutableDictionary alloc] init];
     Class cls = [self class];
