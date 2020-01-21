@@ -117,4 +117,9 @@
 #import "ZJBaseRequest.h"
 #import "ZJReachabilityManager.h"
 
+///中间件类基类
+#import "ZJMediator.h"
+#import "ZJMediator+Example.h"
+
+
 #endif /* ZJModuleCommon_h */

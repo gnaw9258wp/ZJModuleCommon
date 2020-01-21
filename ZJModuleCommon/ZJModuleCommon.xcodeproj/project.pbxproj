@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		A95D154EBFEFB6DB2BD673C0 /* libPods-ZJModuleCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91920B88297BF87A329C1A95 /* libPods-ZJModuleCommon.a */; };
 		F74DBB4B23D443C0003DB35C /* ZJSetAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F74DBB4923D443C0003DB35C /* ZJSetAuthManager.m */; };
+		F79A00B023D69EB500E0CD61 /* ZJMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = F79A00AF23D69EB500E0CD61 /* ZJMediator.m */; };
+		F79A00B323D6A01F00E0CD61 /* ZJMediator+Example.m in Sources */ = {isa = PBXBuildFile; fileRef = F79A00B223D6A01F00E0CD61 /* ZJMediator+Example.m */; };
+		F79A00B523D6A07800E0CD61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79A00B423D6A07800E0CD61 /* UIKit.framework */; };
+		F79A00B723D6A07C00E0CD61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79A00B623D6A07C00E0CD61 /* Foundation.framework */; };
 		F7D91D8A23D1465100545DC3 /* ZJReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D91D8923D1465100545DC3 /* ZJReachabilityManager.m */; };
 		F7F9C51923D05C5700C50492 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F9C51823D05C5700C50492 /* AppDelegate.m */; };
-		F7F9C51C23D05C5700C50492 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F9C51B23D05C5700C50492 /* SceneDelegate.m */; };
 		F7F9C51F23D05C5700C50492 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F9C51E23D05C5700C50492 /* ViewController.m */; };
 		F7F9C52223D05C5700C50492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F9C52023D05C5700C50492 /* Main.storyboard */; };
 		F7F9C52423D05C5800C50492 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F9C52323D05C5800C50492 /* Assets.xcassets */; };
@@ -103,14 +106,18 @@
 		F74DBB1B23D3E3C1003DB35C /* ZJModuleDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJModuleDefine.h; sourceTree = "<group>"; };
 		F74DBB4923D443C0003DB35C /* ZJSetAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSetAuthManager.m; sourceTree = "<group>"; };
 		F74DBB4A23D443C0003DB35C /* ZJSetAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSetAuthManager.h; sourceTree = "<group>"; };
+		F79A00AE23D69EB500E0CD61 /* ZJMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJMediator.h; sourceTree = "<group>"; };
+		F79A00AF23D69EB500E0CD61 /* ZJMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJMediator.m; sourceTree = "<group>"; };
+		F79A00B123D6A01F00E0CD61 /* ZJMediator+Example.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJMediator+Example.h"; sourceTree = "<group>"; };
+		F79A00B223D6A01F00E0CD61 /* ZJMediator+Example.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZJMediator+Example.m"; sourceTree = "<group>"; };
+		F79A00B423D6A07800E0CD61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F79A00B623D6A07C00E0CD61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F7CF326223D5364000A22A2A /* ZJModuleCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJModuleCommon.h; sourceTree = "<group>"; };
 		F7D91D8823D1465100545DC3 /* ZJReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJReachabilityManager.h; sourceTree = "<group>"; };
 		F7D91D8923D1465100545DC3 /* ZJReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJReachabilityManager.m; sourceTree = "<group>"; };
 		F7F9C51423D05C5700C50492 /* ZJModuleCommon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJModuleCommon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F9C51723D05C5700C50492 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7F9C51823D05C5700C50492 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F7F9C51A23D05C5700C50492 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		F7F9C51B23D05C5700C50492 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		F7F9C51D23D05C5700C50492 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F7F9C51E23D05C5700C50492 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F7F9C52123D05C5700C50492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -278,6 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A95D154EBFEFB6DB2BD673C0 /* libPods-ZJModuleCommon.a in Frameworks */,
+				F79A00B723D6A07C00E0CD61 /* Foundation.framework in Frameworks */,
+				F79A00B523D6A07800E0CD61 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +296,8 @@
 		132FA882F3787352EC9A2289 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F79A00B623D6A07C00E0CD61 /* Foundation.framework */,
+				F79A00B423D6A07800E0CD61 /* UIKit.framework */,
 				91920B88297BF87A329C1A95 /* libPods-ZJModuleCommon.a */,
 			);
 			name = Frameworks;
@@ -319,6 +330,17 @@
 			path = ZJSetAuthManager;
 			sourceTree = "<group>";
 		};
+		F79A00AD23D69E5C00E0CD61 /* ZJMediator */ = {
+			isa = PBXGroup;
+			children = (
+				F79A00AE23D69EB500E0CD61 /* ZJMediator.h */,
+				F79A00AF23D69EB500E0CD61 /* ZJMediator.m */,
+				F79A00B123D6A01F00E0CD61 /* ZJMediator+Example.h */,
+				F79A00B223D6A01F00E0CD61 /* ZJMediator+Example.m */,
+			);
+			path = ZJMediator;
+			sourceTree = "<group>";
+		};
 		F7F9C50B23D05C5700C50492 = {
 			isa = PBXGroup;
 			children = (
@@ -343,8 +365,6 @@
 				F7F9C53023D05D0000C50492 /* Class */,
 				F7F9C51723D05C5700C50492 /* AppDelegate.h */,
 				F7F9C51823D05C5700C50492 /* AppDelegate.m */,
-				F7F9C51A23D05C5700C50492 /* SceneDelegate.h */,
-				F7F9C51B23D05C5700C50492 /* SceneDelegate.m */,
 				F7F9C51D23D05C5700C50492 /* ViewController.h */,
 				F7F9C51E23D05C5700C50492 /* ViewController.m */,
 				F7F9C52023D05C5700C50492 /* Main.storyboard */,
@@ -359,6 +379,7 @@
 		F7F9C53023D05D0000C50492 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				F79A00AD23D69E5C00E0CD61 /* ZJMediator */,
 				F74DBB4823D443C0003DB35C /* ZJSetAuthManager */,
 				F74DBB1A23D3E3B1003DB35C /* Define */,
 				F7F9C72223D07BD600C50492 /* BaseVC */,
@@ -884,6 +905,7 @@
 				F7F9C6DC23D06F8200C50492 /* UIButton+TouchAreaInsets.m in Sources */,
 				F7F9C70C23D072D200C50492 /* ZJNavigationController.m in Sources */,
 				F7F9C6D223D06F8200C50492 /* UILabel+AutoSize.m in Sources */,
+				F79A00B023D69EB500E0CD61 /* ZJMediator.m in Sources */,
 				F7F9C6BF23D06F8200C50492 /* NSString+Emoji.m in Sources */,
 				F7F9C70223D0711400C50492 /* NSObject+ModelToDictionary.m in Sources */,
 				F7F9C70F23D0730600C50492 /* UIViewController+BGNavigationViewController.m in Sources */,
@@ -909,6 +931,7 @@
 				F7F9C6C823D06F8200C50492 /* NSObject+XibView.m in Sources */,
 				F7F9C6DB23D06F8200C50492 /* UIButton+Submitting.m in Sources */,
 				F7F9C71C23D0791500C50492 /* UITableView+TCYAdaptor.m in Sources */,
+				F79A00B323D6A01F00E0CD61 /* ZJMediator+Example.m in Sources */,
 				F7F9C6DA23D06F8200C50492 /* UIButton+CountDown.m in Sources */,
 				F7F9C6C623D06F8200C50492 /* NSTimer+Addition.m in Sources */,
 				F7F9C6F023D06F8200C50492 /* UIImageView+GeometryConversion.m in Sources */,
@@ -942,7 +965,6 @@
 				F7F9C6CE23D06F8200C50492 /* UIImage+Capture.m in Sources */,
 				F7F9C6EA23D06F8200C50492 /* UIView+Convert.m in Sources */,
 				F7F9C6F523D06F8200C50492 /* UIViewController+KeyboardAnimation.m in Sources */,
-				F7F9C51C23D05C5700C50492 /* SceneDelegate.m in Sources */,
 				F7F9C6EB23D06F8200C50492 /* UITextView+Placeholder.m in Sources */,
 				F7F9C6BC23D06F8200C50492 /* NSFileManager+Paths.m in Sources */,
 				F7F9C6BE23D06F8200C50492 /* NSString+RegexCategory.m in Sources */,
