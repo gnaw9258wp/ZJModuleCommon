@@ -109,26 +109,26 @@
 }
 #pragma mark-------------------- show Image----------------------------
 
-+ (void)showSuccessMessage:(NSString *)Message
-{
-    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Success";
-    [self showCustomIconInWindow:name message:Message];
-}
-+ (void)showErrorMessage:(NSString *)Message
-{
-    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Error";
-    [self showCustomIconInWindow:name message:Message];
-}
-+ (void)showInfoMessage:(NSString *)Message
-{
-    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Info";
-    [self showCustomIconInWindow:name message:Message];
-}
-+ (void)showWarnMessage:(NSString *)Message
-{
-    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Warn";
-    [self showCustomIconInWindow:name message:Message];
-}
+//+ (void)showSuccessMessage:(NSString *)Message
+//{
+//    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Success";
+//    [self showCustomIconInWindow:name message:Message];
+//}
+//+ (void)showErrorMessage:(NSString *)Message
+//{
+//    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Error";
+//    [self showCustomIconInWindow:name message:Message];
+//}
+//+ (void)showInfoMessage:(NSString *)Message
+//{
+//    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Info";
+//    [self showCustomIconInWindow:name message:Message];
+//}
+//+ (void)showWarnMessage:(NSString *)Message
+//{
+//    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Warn";
+//    [self showCustomIconInWindow:name message:Message];
+//}
 + (void)showCustomIconInWindow:(NSString *)iconName message:(NSString *)message
 {
     [self showCustomIcon:iconName message:message isWindow:true];

@@ -24,10 +24,10 @@
 + (void)showActivityMessageInCustomView:(UIView *)view Message:(NSString *)message;
 + (void)showActivityMessageInCustomView:(UIView *)view Message:(NSString *)message timer:(int)aTimer;
 
-+ (void)showSuccessMessage:(NSString *)Message;
-+ (void)showErrorMessage:(NSString *)Message;
-+ (void)showInfoMessage:(NSString *)Message;
-+ (void)showWarnMessage:(NSString *)Message;
+//+ (void)showSuccessMessage:(NSString *)Message;
+//+ (void)showErrorMessage:(NSString *)Message;
+//+ (void)showInfoMessage:(NSString *)Message;
+//+ (void)showWarnMessage:(NSString *)Message;
 
 
 + (void)showCustomIconInWindow:(NSString *)iconName message:(NSString *)message;
