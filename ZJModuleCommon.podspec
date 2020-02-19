@@ -24,9 +24,9 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                          ZJModuleCommon 是一个用于保存一些常用工具类的工具
-                      DESC
+  spec.description  = <<-DESC 
+                               LZTool 是一个用于保存一些常用工具类的工具
+                        DESC
 
   spec.homepage     = "https://github.com/gnaw9258wp/ZJModuleCommon"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"

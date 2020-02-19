@@ -8,7 +8,7 @@
 
 #import "UITableView+TCYAdaptor.h"
 #import <objc/runtime.h>
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 
 static NSString *nameWithTcyAdjustedContentInsetDidChange = @"nameWithTcyAdjustedContentInsetDidChange";
 
