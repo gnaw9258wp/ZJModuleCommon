@@ -83,6 +83,8 @@
 		F7F9C6F723D06F8200C50492 /* UITextField+LengthLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F9C6AD23D06F8100C50492 /* UITextField+LengthLimit.m */; };
 		F7F9C6F823D06F8200C50492 /* UITextField+Select.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F9C6B223D06F8100C50492 /* UITextField+Select.m */; };
 		F7F9C6F923D06F8200C50492 /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F9C6B323D06F8100C50492 /* UITextField+Shake.m */; };
+		F7F9C6FA23D06F8200C50492 /* 加载.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7F9C6B723D06F8200C50492 /* 加载.gif */; };
+		F7F9C6FB23D06F8200C50492 /* MBProgressHUD+JDragon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F7F9C6B923D06F8200C50492 /* MBProgressHUD+JDragon.bundle */; };
 		F7F9C6FC23D06F8200C50492 /* MBProgressHUD+JDragon.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F9C6BA23D06F8200C50492 /* MBProgressHUD+JDragon.m */; };
 		F7F9C6FF23D06FC300C50492 /* UIApplication+vcManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F9C6FE23D06FC300C50492 /* UIApplication+vcManager.m */; };
 		F7F9C70223D0711400C50492 /* NSObject+ModelToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F9C70023D0711400C50492 /* NSObject+ModelToDictionary.m */; };
@@ -249,7 +251,9 @@
 		F7F9C6B123D06F8100C50492 /* UITextField+LengthLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LengthLimit.h"; sourceTree = "<group>"; };
 		F7F9C6B223D06F8100C50492 /* UITextField+Select.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Select.m"; sourceTree = "<group>"; };
 		F7F9C6B323D06F8100C50492 /* UITextField+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake.m"; sourceTree = "<group>"; };
+		F7F9C6B723D06F8200C50492 /* 加载.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "加载.gif"; sourceTree = "<group>"; };
 		F7F9C6B823D06F8200C50492 /* MBProgressHUD+JDragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JDragon.h"; sourceTree = "<group>"; };
+		F7F9C6B923D06F8200C50492 /* MBProgressHUD+JDragon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "MBProgressHUD+JDragon.bundle"; sourceTree = "<group>"; };
 		F7F9C6BA23D06F8200C50492 /* MBProgressHUD+JDragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JDragon.m"; sourceTree = "<group>"; };
 		F7F9C6FD23D06FC300C50492 /* UIApplication+vcManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+vcManager.h"; sourceTree = "<group>"; };
 		F7F9C6FE23D06FC300C50492 /* UIApplication+vcManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+vcManager.m"; sourceTree = "<group>"; };
@@ -749,8 +753,10 @@
 		F7F9C6B623D06F8200C50492 /* ZJHUD */ = {
 			isa = PBXGroup;
 			children = (
+				F7F9C6B723D06F8200C50492 /* 加载.gif */,
 				F7F9C6B823D06F8200C50492 /* MBProgressHUD+JDragon.h */,
 				F7F9C6BA23D06F8200C50492 /* MBProgressHUD+JDragon.m */,
+				F7F9C6B923D06F8200C50492 /* MBProgressHUD+JDragon.bundle */,
 			);
 			path = ZJHUD;
 			sourceTree = "<group>";
@@ -843,6 +849,8 @@
 				F7F9C52723D05C5800C50492 /* LaunchScreen.storyboard in Resources */,
 				F7F9C52423D05C5800C50492 /* Assets.xcassets in Resources */,
 				F7F9C52223D05C5700C50492 /* Main.storyboard in Resources */,
+				F7F9C6FA23D06F8200C50492 /* 加载.gif in Resources */,
+				F7F9C6FB23D06F8200C50492 /* MBProgressHUD+JDragon.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
