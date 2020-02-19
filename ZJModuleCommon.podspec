@@ -107,7 +107,7 @@ Pod::Spec.new do |spec|
 
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
-  spec.resources = ['ZJModuleCommon/ZJModuleCommon/Class/ZJHUD/MBProgressHUD+JDragon.bundle']
+  # spec.resources = ['ZJModuleCommon/ZJModuleCommon/Class/ZJHUD/MBProgressHUD+JDragon.bundle']
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
