@@ -8,7 +8,6 @@
 
 #import "MBProgressHUD+JDragon.h"
 #import "UIApplication+vcManager.h"
-#import "UIImage+GIF.h"
 #import "UIColor+HEX.h"
 #import <UIImage+GIF.h>
 @implementation MBProgressHUD (JDragon)
