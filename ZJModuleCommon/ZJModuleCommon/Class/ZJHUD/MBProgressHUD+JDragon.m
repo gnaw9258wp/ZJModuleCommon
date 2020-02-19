@@ -9,7 +9,7 @@
 #import "MBProgressHUD+JDragon.h"
 #import "UIApplication+vcManager.h"
 #import "UIColor+HEX.h"
-#import <UIImage+GIF.h>
+#import <SDWebImage/UIImage+GIF.h>
 @implementation MBProgressHUD (JDragon)
 
 + (MBProgressHUD*)createMBProgressHUDviewWithMessage:(NSString*)message isWindiw:(BOOL)isWindow
