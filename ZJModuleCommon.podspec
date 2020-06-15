@@ -90,7 +90,50 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  =  "ZJModuleCommon/ZJModuleCommon/Class/**/*"
+  # spec.source_files  =  "ZJModuleCommon/ZJModuleCommon/Class/**/*"
+  spec.subspec 'ZJMediator' do |ss|
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/ZJMediator/*.{h,m}'
+  end
+
+  spec.subspec 'ZJSetAuthManager' do |ss|
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/ZJSetAuthManager/*.{h,m}'
+  end
+
+  spec.subspec 'Category' do |ss|
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/Category/*.{h,m}'
+  end
+
+  spec.subspec 'Environment' do |ss|
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/Environment/*.{h,m}'
+  end
+
+  spec.subspec 'Define' do |ss|
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/Define/*.{h,m}'
+  end
+
+  spec.subspec 'BaseVC' do |ss|
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/BaseVC/*.{h,m}'
+      ss.dependency 'ZJModuleCommon/Category'
+      ss.dependency 'ZJModuleCommon/Define'
+  end
+
+
+  spec.subspec 'ZJHUD' do |ss|
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/ZJHUD/*.{h,m}'
+      ss.dependency 'ZJModuleCommon/Category'
+      ss.dependency 'ZJModuleCommon/Define'
+  end
+
+  spec.subspec 'ZJNavigationController' do |ss|
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/ZJNavigationController/*.{h,m}'
+      ss.dependency 'ZJModuleCommon/Category'
+  end
+
+  spec.subspec 'ZJNetWork' do |ss|
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/ZJNetWork/*.{h,m}'
+      ss.dependency 'ZJModuleCommon/Environment'
+      ss.dependency 'ZJModuleCommon/Category'
+  end
 
   #spec.exclude_files = "Classes/Exclude"
 
