@@ -95,20 +95,21 @@ Pod::Spec.new do |spec|
       ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/ZJMediator/*.{h,m}'
   end
 
+  spec.subspec 'Define' do |ss|
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/Define/*.{h,m}'
+  end
+
   spec.subspec 'ZJSetAuthManager' do |ss|
       ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/ZJSetAuthManager/*.{h,m}'
+      ss.dependency 'ZJModuleCommon/Define'
   end
 
   spec.subspec 'Category' do |ss|
-      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/Category/*.{h,m}'
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/Category/**/**/*.{h,m}'
   end
 
   spec.subspec 'Environment' do |ss|
       ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/Environment/*.{h,m}'
-  end
-
-  spec.subspec 'Define' do |ss|
-      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/Define/*.{h,m}'
   end
 
   spec.subspec 'BaseVC' do |ss|
@@ -122,6 +123,7 @@ Pod::Spec.new do |spec|
       ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/ZJHUD/*.{h,m}'
       ss.dependency 'ZJModuleCommon/Category'
       ss.dependency 'ZJModuleCommon/Define'
+      ss.dependency 'MBProgressHUD', '~> 1.1.0'
   end
 
   spec.subspec 'ZJNavigationController' do |ss|
@@ -133,11 +135,14 @@ Pod::Spec.new do |spec|
       ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/ZJNetWork/*.{h,m}'
       ss.dependency 'ZJModuleCommon/Environment'
       ss.dependency 'ZJModuleCommon/Category'
+      ss.dependency 'YTKNetwork', '~> 2.1.4'
+      ss.dependency 'Reachability', '~> 3.2'
   end
 
   #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
+  # spec.prefix_header_contents = '#import "ZJPrefixHeader.pch"'
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -179,7 +184,4 @@ Pod::Spec.new do |spec|
   # spec.dependency "JSONKit", "~> 1.4"
   spec.dependency 'Masonry', '~> 1.1.0'
   spec.dependency 'SDWebImage', '~> 5.0'
-  spec.dependency 'MBProgressHUD', '~> 1.1.0'
-  spec.dependency 'YTKNetwork', '~> 2.1.4'
-  spec.dependency 'Reachability', '~> 3.2'
 end

@@ -110,7 +110,6 @@
 		F79A00B223D6A01F00E0CD61 /* ZJMediator+Example.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZJMediator+Example.m"; sourceTree = "<group>"; };
 		F79A00B423D6A07800E0CD61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F79A00B623D6A07C00E0CD61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F7CF326223D5364000A22A2A /* ZJModuleCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJModuleCommon.h; sourceTree = "<group>"; };
 		F7D91D8823D1465100545DC3 /* ZJReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJReachabilityManager.h; sourceTree = "<group>"; };
 		F7D91D8923D1465100545DC3 /* ZJReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJReachabilityManager.m; sourceTree = "<group>"; };
 		F7F9C51423D05C5700C50492 /* ZJModuleCommon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJModuleCommon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,7 +311,6 @@
 			isa = PBXGroup;
 			children = (
 				F74DBB1B23D3E3C1003DB35C /* ZJModuleDefine.h */,
-				F7CF326223D5364000A22A2A /* ZJModuleCommon.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -1100,6 +1098,7 @@
 			baseConfigurationReference = DE6A51D0B8768554004AC5C5 /* Pods-ZJModuleCommon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SQN84YY35D;
 				INFOPLIST_FILE = ZJModuleCommon/Info.plist;
@@ -1118,6 +1117,7 @@
 			baseConfigurationReference = AE656583478BFD4CD57A4005 /* Pods-ZJModuleCommon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SQN84YY35D;
 				INFOPLIST_FILE = ZJModuleCommon/Info.plist;
