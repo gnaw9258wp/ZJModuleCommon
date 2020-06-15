@@ -96,6 +96,8 @@ typedef enum
 
 + (NSString *)macAddress;
 
++ (NSString *)getIPAddress;
+
 //Return the current device CPU frequency
 + (NSUInteger)cpuFrequency;
 // Return the current device BUS frequency

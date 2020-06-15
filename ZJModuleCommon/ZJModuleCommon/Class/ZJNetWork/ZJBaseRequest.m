@@ -9,6 +9,7 @@
 #import "ZJBaseRequest.h"
 #import "ZJEnvironmentManager.h"
 #import "NSObject+ModelToDictionary.h"
+#import "NSString+UrlEncode.h"
 #import <objc/runtime.h>
 
 @implementation ZJBaseRequest
@@ -108,7 +109,20 @@
             }
             return;
         }
-        NSLog(@"=====SUCCESS=====\n请求接口 : %@\n请求参数 : %@\n=================\n",request,request.requestArgument);
+        NSString *urlRequest = [request.baseUrl == nil ? @"":request.baseUrl stringByAppendingString:request.requestUrl == nil ? @"" :request.requestUrl];
+        NSDictionary *requestArgument = request.requestArgument;
+        if (requestArgument)
+        {
+            NSArray *arrayKey = requestArgument.allKeys;
+            for (int i = 0; i < arrayKey.count; i++) {
+                NSString *key = arrayKey[i];
+                NSString *value = requestArgument[key];
+                if (key && value) {
+                    urlRequest = [urlRequest urlAddCompnentForValue:value key:key];
+                }
+            }
+        }
+        NSLog(@"=====SUCCESS=====\n请求接口 : %@\n=================\n",urlRequest);
         NSLog(@"=====请求成功===== 响应参数 ：%@",result);
         if (success) {
             success(result);

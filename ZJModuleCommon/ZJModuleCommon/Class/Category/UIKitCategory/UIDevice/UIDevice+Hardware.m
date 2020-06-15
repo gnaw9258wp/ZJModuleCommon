@@ -20,6 +20,8 @@
 #import <mach/mach.h>
 #import <mach/mach_host.h>
 #import <mach/processor_info.h>
+#import <ifaddrs.h>
+#import <arpa/inet.h>
 
 @implementation UIDevice (Hardware)
 - (NSString*)hardwareString {
@@ -157,59 +159,97 @@
 
 - (NSString*)hardwareSimpleDescription
 {
-    NSString *hardware = [self hardwareString];
-    if ([hardware isEqualToString:@"iPhone1,1"])    return @"iPhone 2G";
-    if ([hardware isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
-    if ([hardware isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
-    if ([hardware isEqualToString:@"iPhone3,1"])    return @"iPhone 4";
-    if ([hardware isEqualToString:@"iPhone3,2"])    return @"iPhone 4";
-    if ([hardware isEqualToString:@"iPhone3,3"])    return @"iPhone 4";
-    if ([hardware isEqualToString:@"iPhone4,1"])    return @"iPhone 4S";
-    if ([hardware isEqualToString:@"iPhone5,1"])    return @"iPhone 5";
-    if ([hardware isEqualToString:@"iPhone5,2"])    return @"iPhone 5";
-    if ([hardware isEqualToString:@"iPhone5,3"])    return @"iPhone 5C";
-    if ([hardware isEqualToString:@"iPhone5,4"])    return @"iPhone 5C";
-    if ([hardware isEqualToString:@"iPhone6,1"])    return @"iPhone 5S";
-    if ([hardware isEqualToString:@"iPhone6,2"])    return @"iPhone 5S";
-    
-    if ([hardware isEqualToString:@"iPod1,1"])      return @"iPod Touch (1 Gen)";
-    if ([hardware isEqualToString:@"iPod2,1"])      return @"iPod Touch (2 Gen)";
-    if ([hardware isEqualToString:@"iPod3,1"])      return @"iPod Touch (3 Gen)";
-    if ([hardware isEqualToString:@"iPod4,1"])      return @"iPod Touch (4 Gen)";
-    if ([hardware isEqualToString:@"iPod5,1"])      return @"iPod Touch (5 Gen)";
-    
-    if ([hardware isEqualToString:@"iPad1,1"])      return @"iPad";
-    if ([hardware isEqualToString:@"iPad1,2"])      return @"iPad";
-    if ([hardware isEqualToString:@"iPad2,1"])      return @"iPad 2";
-    if ([hardware isEqualToString:@"iPad2,2"])      return @"iPad 2";
-    if ([hardware isEqualToString:@"iPad2,3"])      return @"iPad 2";
-    if ([hardware isEqualToString:@"iPad2,4"])      return @"iPad 2";
-    if ([hardware isEqualToString:@"iPad2,5"])      return @"iPad Mini";
-    if ([hardware isEqualToString:@"iPad2,6"])      return @"iPad Mini";
-    if ([hardware isEqualToString:@"iPad2,7"])      return @"iPad Mini";
-    if ([hardware isEqualToString:@"iPad3,1"])      return @"iPad 3";
-    if ([hardware isEqualToString:@"iPad3,2"])      return @"iPad 3";
-    if ([hardware isEqualToString:@"iPad3,3"])      return @"iPad 3";
-    if ([hardware isEqualToString:@"iPad3,4"])      return @"iPad 4";
-    if ([hardware isEqualToString:@"iPad3,5"])      return @"iPad 4";
-    if ([hardware isEqualToString:@"iPad3,6"])      return @"iPad 4";
-    if ([hardware isEqualToString:@"iPad4,1"])      return @"iPad Air";
-    if ([hardware isEqualToString:@"iPad4,2"])      return @"iPad Air";
-    if ([hardware isEqualToString:@"iPad4,3"])      return @"iPad Air";
-    if ([hardware isEqualToString:@"iPad4,4"])      return @"iPad Mini Retina";
-    if ([hardware isEqualToString:@"iPad4,5"])      return @"iPad Mini Retina";
-    
-    if ([hardware isEqualToString:@"i386"])         return @"Simulator";
-    if ([hardware isEqualToString:@"x86_64"])       return @"Simulator";
-    
-    NSLog(@"This is a device which is not listed in this category. Please visit https://github.com/inderkumarrathore/UIDevice-Hardware and add a comment there.");
-    NSLog(@"Your device hardware string is: %@", hardware);
-    
-    if ([hardware hasPrefix:@"iPhone"]) return @"iPhone";
-    if ([hardware hasPrefix:@"iPod"]) return @"iPod";
-    if ([hardware hasPrefix:@"iPad"]) return @"iPad";
-    
-    return nil;
+    NSString *platform = [self hardwareString];
+     //------------------------------iPhone---------------------------
+       if ([platform isEqualToString:@"iPhone1,1"]) return @"iPhone 2G";
+       if ([platform isEqualToString:@"iPhone1,2"]) return @"iPhone 3G";
+       if ([platform isEqualToString:@"iPhone2,1"]) return @"iPhone 3GS";
+       if ([platform isEqualToString:@"iPhone3,1"] ||
+           [platform isEqualToString:@"iPhone3,2"] ||
+           [platform isEqualToString:@"iPhone3,3"]) return @"iPhone 4";
+       if ([platform isEqualToString:@"iPhone4,1"]) return @"iPhone 4S";
+       if ([platform isEqualToString:@"iPhone5,1"] ||
+           [platform isEqualToString:@"iPhone5,2"]) return @"iPhone 5";
+       if ([platform isEqualToString:@"iPhone5,3"] ||
+           [platform isEqualToString:@"iPhone5,4"]) return @"iPhone 5c";
+       if ([platform isEqualToString:@"iPhone6,1"] ||
+           [platform isEqualToString:@"iPhone6,2"]) return @"iPhone 5s";
+       if ([platform isEqualToString:@"iPhone7,2"]) return @"iPhone 6";
+       if ([platform isEqualToString:@"iPhone7,1"]) return @"iPhone 6 Plus";
+       if ([platform isEqualToString:@"iPhone8,1"]) return @"iPhone 6s";
+       if ([platform isEqualToString:@"iPhone8,2"]) return @"iPhone 6s Plus";
+       if ([platform isEqualToString:@"iPhone8,4"]) return @"iPhone SE";
+       if ([platform isEqualToString:@"iPhone9,1"] ||
+           [platform isEqualToString:@"iPhone9,3"]) return @"iPhone 7";
+       if ([platform isEqualToString:@"iPhone9,2"] ||
+           [platform isEqualToString:@"iPhone9,4"]) return @"iPhone 7 Plus";
+       if ([platform isEqualToString:@"iPhone10,1"] ||
+           [platform isEqualToString:@"iPhone10,4"]) return @"iPhone 8";
+       if ([platform isEqualToString:@"iPhone10,2"] ||
+           [platform isEqualToString:@"iPhone10,5"]) return @"iPhone 8 Plus";
+       if ([platform isEqualToString:@"iPhone10,3"] ||
+           [platform isEqualToString:@"iPhone10,6"]) return @"iPhone X";
+       if ([platform isEqualToString:@"iPhone11,8"]) return @"iPhone XR";
+       if ([platform isEqualToString:@"iPhone11,2"]) return @"iPhone XS";
+       if ([platform isEqualToString:@"iPhone11,4"] ||
+           [platform isEqualToString:@"iPhone11,6"]) return @"iPhone XS Max";
+       if ([platform isEqualToString:@"iPhone12,1"]) return @"iPhone 11";
+       if ([platform isEqualToString:@"iPhone12,3"]) return @"iPhone 11 Pro";
+       if ([platform isEqualToString:@"iPhone12,5"]) return @"iPhone 11 Pro Max";
+       
+       //------------------------------iPad--------------------------
+       if ([platform isEqualToString:@"iPad1,1"]) return @"iPad";
+       if ([platform isEqualToString:@"iPad2,1"] ||
+           [platform isEqualToString:@"iPad2,2"] ||
+           [platform isEqualToString:@"iPad2,3"] ||
+           [platform isEqualToString:@"iPad2,4"]) return @"iPad 2";
+       if ([platform isEqualToString:@"iPad3,1"] ||
+           [platform isEqualToString:@"iPad3,2"] ||
+           [platform isEqualToString:@"iPad3,3"]) return @"iPad 3";
+       if ([platform isEqualToString:@"iPad3,4"] ||
+           [platform isEqualToString:@"iPad3,5"] ||
+           [platform isEqualToString:@"iPad3,6"]) return @"iPad 4";
+       if ([platform isEqualToString:@"iPad4,1"] ||
+           [platform isEqualToString:@"iPad4,2"] ||
+           [platform isEqualToString:@"iPad4,3"]) return @"iPad Air";
+       if ([platform isEqualToString:@"iPad5,3"] ||
+           [platform isEqualToString:@"iPad5,4"]) return @"iPad Air 2";
+       if ([platform isEqualToString:@"iPad6,3"] ||
+           [platform isEqualToString:@"iPad6,4"]) return @"iPad Pro 9.7-inch";
+       if ([platform isEqualToString:@"iPad6,7"] ||
+           [platform isEqualToString:@"iPad6,8"]) return @"iPad Pro 12.9-inch";
+       if ([platform isEqualToString:@"iPad6,11"] ||
+           [platform isEqualToString:@"iPad6,12"]) return @"iPad 5";
+       if ([platform isEqualToString:@"iPad7,1"] ||
+           [platform isEqualToString:@"iPad7,2"]) return @"iPad Pro 12.9-inch 2";
+       if ([platform isEqualToString:@"iPad7,3"] ||
+           [platform isEqualToString:@"iPad7,4"]) return @"iPad Pro 10.5-inch";
+       
+       //------------------------------iPad Mini-----------------------
+       if ([platform isEqualToString:@"iPad2,5"] ||
+           [platform isEqualToString:@"iPad2,6"] ||
+           [platform isEqualToString:@"iPad2,7"]) return @"iPad mini";
+       if ([platform isEqualToString:@"iPad4,4"] ||
+           [platform isEqualToString:@"iPad4,5"] ||
+           [platform isEqualToString:@"iPad4,6"]) return @"iPad mini 2";
+       if ([platform isEqualToString:@"iPad4,7"] ||
+           [platform isEqualToString:@"iPad4,8"] ||
+           [platform isEqualToString:@"iPad4,9"]) return @"iPad mini 3";
+       if ([platform isEqualToString:@"iPad5,1"] ||
+           [platform isEqualToString:@"iPad5,2"]) return @"iPad mini 4";
+       
+       //------------------------------iTouch------------------------
+       if ([platform isEqualToString:@"iPod1,1"]) return @"iTouch";
+       if ([platform isEqualToString:@"iPod2,1"]) return @"iTouch2";
+       if ([platform isEqualToString:@"iPod3,1"]) return @"iTouch3";
+       if ([platform isEqualToString:@"iPod4,1"]) return @"iTouch4";
+       if ([platform isEqualToString:@"iPod5,1"]) return @"iTouch5";
+       if ([platform isEqualToString:@"iPod7,1"]) return @"iTouch6";
+       
+       //------------------------------Samulitor-------------------------------------
+       if ([platform isEqualToString:@"i386"] ||
+           [platform isEqualToString:@"x86_64"]) return @"iPhone Simulator";
+       return @"Unknown";
 }
 
 
@@ -334,6 +374,31 @@
     return NO;
 }
 
++ (NSString *)getIPAddress{
+    NSString *address = @"error";
+    struct ifaddrs *interfaces = NULL;
+    struct ifaddrs *temp_addr = NULL;
+    int success = 0;
+    // retrieve the current interfaces - returns 0 on success
+    success = getifaddrs(&interfaces);
+    if (success == 0) {
+        // Loop through linked list of interfaces
+        temp_addr = interfaces;
+        while(temp_addr != NULL) {
+            if(temp_addr->ifa_addr->sa_family == AF_INET) {
+                // Check if interface is en0 which is the wifi connection on the iPhone
+                if([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
+                    // Get NSString from C String
+                    address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                }
+            }
+            temp_addr = temp_addr->ifa_next;
+        }
+    }
+    // Free memory
+    freeifaddrs(interfaces);
+    return address;
+}
 
 + (NSString *)macAddress {
     int                 mib[6];

@@ -50,4 +50,12 @@
 {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
+/**
+*  @brief  去除空格 所有
+*
+*  @return 去除空格后的字符串
+*/
+- (NSString *)trimmingAllWhitespace{
+    return [self stringByReplacingOccurrencesOfString:@" " withString:@""];
+}
 @end

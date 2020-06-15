@@ -46,4 +46,14 @@
  */
 - (NSDictionary *)dictionaryFromURLParameters;
 
+/**
+*  @brief  url 后拼接参数
+*
+*  @param value 值
+*
+*  @param key 键
+*
+*  @return 返回拼接后的链接
+*/
+-(NSString *)urlAddCompnentForValue:(NSString *)value key:(NSString *)key;
 @end

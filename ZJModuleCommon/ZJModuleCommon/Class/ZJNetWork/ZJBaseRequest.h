@@ -14,15 +14,9 @@ typedef void(^ZJRequestFailBlock)(NSString *message,NSString *statusCode,NSError
 
 #import "YTKBaseRequest.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface ZJBaseRequest : YTKBaseRequest
-
-@property (nonatomic,strong)NSString *action;
-@property (nonatomic,strong)NSString *reqId;
 
 - (void)ZJ_StartRequestWithCompletionBlockWithSuccess:(ZJRequestSuccessBlock)success failure:(ZJRequestFailBlock)failure;
 
 @end
 
-NS_ASSUME_NONNULL_END

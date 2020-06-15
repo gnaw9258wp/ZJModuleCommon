@@ -22,7 +22,7 @@
  */
 - (NSString *)stringByRemovingScriptsAndStrippingHTML;
 /**
- *  @brief  去除空格
+ *  @brief  去除空格 头尾
  *
  *  @return 去除空格后的字符串
  */
@@ -33,4 +33,10 @@
  *  @return 去除字符串与空行的字符串
  */
 - (NSString *)trimmingWhitespaceAndNewlines;
+/**
+ *  @brief  去除空格 所有
+ *
+ *  @return 去除空格后的字符串
+ */
+- (NSString *)trimmingAllWhitespace;
 @end

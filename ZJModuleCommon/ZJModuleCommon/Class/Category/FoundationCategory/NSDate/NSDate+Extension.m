@@ -611,4 +611,18 @@
                                       toDate:fromDate
                                      options:0];
 }
+
++ (NSString *)getCurrentTimestamp{
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval time = [date timeIntervalSince1970]*1000;// *1000 是精确到毫秒(13位),不乘就是精确到秒(10位)
+    NSString *timeString = [NSString stringWithFormat:@"%.0f", time];
+    return timeString;
+}
+
++ (NSString *)getCurrentTimestampToSecod{
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval time = [date timeIntervalSince1970];
+    NSString *timeString = [NSString stringWithFormat:@"%.0f", time];
+    return timeString;
+}
 @end

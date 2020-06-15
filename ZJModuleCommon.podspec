@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZJModuleCommon"
-  spec.version      = "1.0.4"
+  spec.version      = "1.0.5"
   spec.summary      = "A short"
 
   # This description is used to generate tags and improve search results.
@@ -90,7 +90,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  # spec.source_files  =  "ZJModuleCommon/ZJModuleCommon/Class/**/*"
+  spec.source_files  =  "ZJModuleCommon/ZJModuleCommon/Class/ZJModuleCommon.h"
   spec.subspec 'ZJMediator' do |ss|
       ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/ZJMediator/*.{h,m}'
   end
@@ -145,6 +145,7 @@ Pod::Spec.new do |spec|
   # spec.public_header_files = "Classes/**/*.h"
   # spec.prefix_header_contents = '#import "ZJPrefixHeader.pch"'
 
+  # spec.prefix_header_contents = '#import "ZJPrefixHeader.pch"'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

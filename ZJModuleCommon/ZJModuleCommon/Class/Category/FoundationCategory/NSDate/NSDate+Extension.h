@@ -28,6 +28,15 @@
 + (NSUInteger)second:(NSDate *)date;
 
 /**
+* 获取时间戳(毫秒为单位)
+*/
++ (NSString *)getCurrentTimestamp;
+
+/**
+* 获取时间戳(秒为单位)
+*/
++ (NSString *)getCurrentTimestampToSecod;
+/**
  * 获取一年中的总天数
  */
 - (NSUInteger)daysInYear;

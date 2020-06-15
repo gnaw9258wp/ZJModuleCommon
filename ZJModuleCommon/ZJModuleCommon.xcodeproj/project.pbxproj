@@ -105,6 +105,7 @@
 		DE6A51D0B8768554004AC5C5 /* Pods-ZJModuleCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJModuleCommon.debug.xcconfig"; path = "Target Support Files/Pods-ZJModuleCommon/Pods-ZJModuleCommon.debug.xcconfig"; sourceTree = "<group>"; };
 		F726D80224974D32001EE797 /* MBProgressHUD+JDragon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "MBProgressHUD+JDragon.bundle"; sourceTree = "<group>"; };
 		F726D80424974EA4001EE797 /* tabbar_discoverhighlightgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbar_discoverhighlightgif.gif; sourceTree = "<group>"; };
+		F726D94D24979754001EE797 /* ZJModuleCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJModuleCommon.h; sourceTree = "<group>"; };
 		F74DBB1B23D3E3C1003DB35C /* ZJModuleDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJModuleDefine.h; sourceTree = "<group>"; };
 		F74DBB4923D443C0003DB35C /* ZJSetAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSetAuthManager.m; sourceTree = "<group>"; };
 		F74DBB4A23D443C0003DB35C /* ZJSetAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSetAuthManager.h; sourceTree = "<group>"; };
@@ -387,6 +388,7 @@
 				F7F9C6B623D06F8200C50492 /* ZJHUD */,
 				F7F9C6B523D06F8200C50492 /* ZJNavigationController */,
 				F7F9C6B423D06F8200C50492 /* ZJNetWork */,
+				F726D94D24979754001EE797 /* ZJModuleCommon.h */,
 			);
 			path = Class;
 			sourceTree = "<group>";
