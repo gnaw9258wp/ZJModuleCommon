@@ -108,26 +108,27 @@
 }
 #pragma mark-------------------- show Image----------------------------
 
-//+ (void)showSuccessMessage:(NSString *)Message
-//{
-//    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Success";
-//    [self showCustomIconInWindow:name message:Message];
-//}
-//+ (void)showErrorMessage:(NSString *)Message
-//{
-//    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Error";
-//    [self showCustomIconInWindow:name message:Message];
-//}
-//+ (void)showInfoMessage:(NSString *)Message
-//{
-//    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Info";
-//    [self showCustomIconInWindow:name message:Message];
-//}
-//+ (void)showWarnMessage:(NSString *)Message
-//{
-//    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Warn";
-//    [self showCustomIconInWindow:name message:Message];
-//}
++ (void)showSuccessMessage:(NSString *)Message
+{
+    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Success";
+    [self showCustomIconInWindow:name message:Message];
+}
++ (void)showErrorMessage:(NSString *)Message
+{
+    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Error";
+    [self showCustomIconInWindow:name message:Message];
+}
++ (void)showInfoMessage:(NSString *)Message
+{
+    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Info";
+    [self showCustomIconInWindow:name message:Message];
+}
++ (void)showWarnMessage:(NSString *)Message
+{
+    NSString *name =@"MBProgressHUD+JDragon.bundle/MBProgressHUD/MBHUD_Warn";
+    [self showCustomIconInWindow:name message:Message];
+}
+
 + (void)showCustomIconInWindow:(NSString *)iconName message:(NSString *)message
 {
     [self showCustomIcon:iconName message:message isWindow:true];
@@ -147,27 +148,27 @@
 
 #pragma mark-------------------- Custom Gif ----------------------------
 
-+ (void)showCustomGifLoadingInWindowMessage:(NSString *)message{
-    [self showCustomGifLoadingMessage:message isWindow:YES customView:nil timer:0];
++ (void)showCustomGifLoadingInWindowMessage:(NSString *)message  iconName:(NSString *)iconName{
+    [self showCustomGifLoadingMessage:message isWindow:YES customView:nil timer:0 iconName:iconName];
 }
 
-+ (void)showCustomGifLoadingInViewMessage:(NSString *)message{
-    [self showCustomGifLoadingMessage:message isWindow:NO customView:nil timer:0];
++ (void)showCustomGifLoadingInViewMessage:(NSString *)message  iconName:(NSString *)iconName{
+    [self showCustomGifLoadingMessage:message isWindow:NO customView:nil timer:0 iconName:iconName];
 }
 
-+ (void)showCustomGifLoadingInWindowMessage:(NSString *)message timer:(int)aTimer{
-    [self showCustomGifLoadingMessage:message isWindow:YES customView:nil timer:aTimer];
++ (void)showCustomGifLoadingInWindowMessage:(NSString *)message iconName:(NSString *)iconName timer:(int)aTimer{
+    [self showCustomGifLoadingMessage:message isWindow:YES customView:nil timer:aTimer iconName:iconName];
 }
 
-+ (void)showCustomGifLoadingInViewMessage:(NSString *)message timer:(int)aTimer{
-    [self showCustomGifLoadingMessage:message isWindow:NO customView:nil timer:aTimer];
++ (void)showCustomGifLoadingInViewMessage:(NSString *)message iconName:(NSString *)iconName timer:(int)aTimer{
+    [self showCustomGifLoadingMessage:message isWindow:NO customView:nil timer:aTimer iconName:iconName];
 }
 
-+ (void)showCustomGifLoadingMessage:(NSString*)message isWindow:(BOOL)isWindow customView:(UIView *)customView timer:(int)aTimer
++ (void)showCustomGifLoadingMessage:(NSString*)message isWindow:(BOOL)isWindow customView:(UIView *)customView timer:(int)aTimer  iconName:(NSString *)iconName
 {
     MBProgressHUD *hud  =  [self createMBProgressHUDviewWithMessage:message isWindiw:isWindow customView:customView];
     hud.mode = MBProgressHUDModeCustomView;
-    NSString  *filePath = [[NSBundle bundleWithPath:[[NSBundle mainBundle] bundlePath]]pathForResource:@"加载" ofType:@"gif"];
+    NSString  *filePath = [[NSBundle bundleWithPath:[[NSBundle mainBundle] bundlePath]]pathForResource:iconName ofType:@"gif"];
     NSData  *imageData = [NSData dataWithContentsOfFile:filePath];
     UIImage *image = [UIImage sd_imageWithGIFData:imageData];
     UIImageView* mainImageView= [[UIImageView alloc] initWithImage:image];
@@ -182,12 +183,12 @@
     }
 }
 
-+ (void)showCustomGifLoadingInCustomView:(UIView *)view Message:(NSString *)message{
-    [self showCustomGifLoadingMessage:message isWindow:NO customView:view timer:0];
++ (void)showCustomGifLoadingInCustomView:(UIView *)view Message:(NSString *)message  iconName:(NSString *)iconName{
+    [self showCustomGifLoadingMessage:message isWindow:NO customView:view timer:0 iconName:iconName];
 }
 
-+ (void)showCustomGifLoadingInCustomView:(UIView *)view Message:(NSString *)message timer:(int)aTimer{
-    [self showCustomGifLoadingMessage:message isWindow:NO customView:view timer:aTimer];
++ (void)showCustomGifLoadingInCustomView:(UIView *)view Message:(NSString *)message iconName:(NSString *)iconName timer:(int)aTimer{
+    [self showCustomGifLoadingMessage:message isWindow:NO customView:view timer:aTimer iconName:iconName];
 }
 
 + (void)hideHUD:(UIView *)view

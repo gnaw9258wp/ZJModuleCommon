@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZJModuleCommon"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
   spec.summary      = "A short"
 
   # This description is used to generate tags and improve search results.
@@ -124,6 +124,7 @@ Pod::Spec.new do |spec|
       ss.dependency 'ZJModuleCommon/Category'
       ss.dependency 'ZJModuleCommon/Define'
       ss.dependency 'MBProgressHUD', '~> 1.1.0'
+      ss.resources = "ZJModuleCommon/ZJModuleCommon/Class/ZJHUD/*.{xib,bundle,xcassets,html,plist,js,json,gif}"
   end
 
   spec.subspec 'ZJNavigationController' do |ss|

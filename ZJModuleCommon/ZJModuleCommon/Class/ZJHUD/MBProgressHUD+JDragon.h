@@ -24,23 +24,25 @@
 + (void)showActivityMessageInCustomView:(UIView *)view Message:(NSString *)message;
 + (void)showActivityMessageInCustomView:(UIView *)view Message:(NSString *)message timer:(int)aTimer;
 
-//+ (void)showSuccessMessage:(NSString *)Message;
-//+ (void)showErrorMessage:(NSString *)Message;
-//+ (void)showInfoMessage:(NSString *)Message;
-//+ (void)showWarnMessage:(NSString *)Message;
-
++ (void)showSuccessMessage:(NSString *)Message;
++ (void)showErrorMessage:(NSString *)Message;
++ (void)showInfoMessage:(NSString *)Message;
++ (void)showWarnMessage:(NSString *)Message;
 
 + (void)showCustomIconInWindow:(NSString *)iconName message:(NSString *)message;
 + (void)showCustomIconInView:(NSString *)iconName message:(NSString *)message;
 
-+ (void)showCustomGifLoadingInWindowMessage:(NSString *)message;
-+ (void)showCustomGifLoadingInViewMessage:(NSString *)message;
 
-+ (void)showCustomGifLoadingInWindowMessage:(NSString *)message timer:(int)aTimer;
-+ (void)showCustomGifLoadingInViewMessage:(NSString *)message timer:(int)aTimer;
++ (void)showCustomGifLoadingInWindowMessage:(NSString *)message  iconName:(NSString *)iconName;
++ (void)showCustomGifLoadingInViewMessage:(NSString *)message  iconName:(NSString *)iconName;
 
-+ (void)showCustomGifLoadingInCustomView:(UIView *)view Message:(NSString *)message;
-+ (void)showCustomGifLoadingInCustomView:(UIView *)view Message:(NSString *)message timer:(int)aTimer;
++ (void)showCustomGifLoadingInWindowMessage:(NSString *)message iconName:(NSString *)iconName timer:(int)aTimer;
++ (void)showCustomGifLoadingInViewMessage:(NSString *)message iconName:(NSString *)iconName timer:(int)aTimer;
+
+
++ (void)showCustomGifLoadingInCustomView:(UIView *)view Message:(NSString *)message  iconName:(NSString *)iconName;
++ (void)showCustomGifLoadingInCustomView:(UIView *)view Message:(NSString *)message iconName:(NSString *)iconName timer:(int)aTimer;
+
 
 + (void)hideHUD;
 + (void)hideHUD:(UIView *)view;
