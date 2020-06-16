@@ -22,7 +22,6 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [MBProgressHUD ZJ_showCustomGifLoadingInWindowMessage:@"tabbar_discoverhighlightgif" iconName:@"" timer:2];
+    [MBProgressHUD ZJ_showCustomGifLoadingInWindowMessage:nil iconName:@"tabbar_discoverhighlightgif" timer:2];
 }
-
 @end

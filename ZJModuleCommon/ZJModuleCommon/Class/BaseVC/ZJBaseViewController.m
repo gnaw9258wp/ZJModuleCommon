@@ -35,7 +35,7 @@
         return;
     }
     
-    if ([self ZJ_navType] == NavTypeNormal)
+    if ([self ZJ_navType] == ZJNavTypeNormal)
     {
         UIImage *whiteImage = [UIImage ZJ_imageFromColor:[UIColor whiteColor] size:CGSizeMake(UIScreen.mainScreen.bounds.size.width, ZJTopHeight)];
         [self.navigationController.navigationBar setBackgroundImage:whiteImage forBarMetrics:UIBarMetricsDefault];
@@ -48,12 +48,12 @@
             UIImage *lineImage = [UIImage ZJ_imageFromColor:[UIColor clearColor] size:CGSizeMake([UIScreen mainScreen].bounds.size.width, 0.5)];
             [self.navigationController.navigationBar setShadowImage:lineImage];
         }
-    }else if ([self ZJ_navType] == NavTypeBlue)
+    }else if ([self ZJ_navType] == ZJNavTypeCustomColor)
     {
-        UIImage *blueImage = [UIImage jk_imageWithColor:[UIColor blueColor]];
+        UIImage *blueImage = [UIImage jk_imageWithColor:[self ZJ_navTypeCustomColor]];
         [self.navigationController.navigationBar setBackgroundImage:blueImage forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-    }else if ([self ZJ_navType] == NavTypeClear)
+    }else if ([self ZJ_navType] == ZJNavTypeClear)
     {
         self.navigationController.navigationBar.translucent = YES;
         self.navigationController.navigationBar.barTintColor = UIColor.clearColor;

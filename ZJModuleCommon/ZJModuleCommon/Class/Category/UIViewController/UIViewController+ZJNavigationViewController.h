@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-typedef NS_ENUM(NSInteger, NavType) {
-    NavTypeNormal                  = 0, //导航条白色
-    NavTypeBlue                    = 1, //导航条自定义的蓝色图片样式
-    NavTypeClear                   = 2 //透明
+typedef NS_ENUM(NSInteger, ZJNavType) {
+    ZJNavTypeNormal                  = 0, //导航条白色
+    ZJNavTypeCustomColor             = 1, //导航条自定义的颜色
+    ZJNavTypeClear                   = 2 //透明
 };
 @interface UIViewController (ZJNavigationViewController)
 
@@ -84,7 +84,12 @@ typedef NS_ENUM(NSInteger, NavType) {
 /**
  导航条样式
  */
-- (NavType )ZJ_navType;
+- (ZJNavType )ZJ_navType;
+
+/**
+ 导航条样式为NavTypeCustomColor的自定义颜色
+ */
+- (UIColor *)ZJ_navTypeCustomColor;
 
 /**
  电池条样式

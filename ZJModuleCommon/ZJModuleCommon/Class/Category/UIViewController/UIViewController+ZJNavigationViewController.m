@@ -64,9 +64,13 @@
 }
 
 //默认导航条背景色
-- (NavType)ZJ_navType
+- (ZJNavType)ZJ_navType
 {
-    return NavTypeNormal;
+    return ZJNavTypeNormal;
+}
+
+- (UIColor *)ZJ_navTypeCustomColor{
+    return [UIColor whiteColor];
 }
 
 - (UIStatusBarStyle)ZJ_StatusBarStyle

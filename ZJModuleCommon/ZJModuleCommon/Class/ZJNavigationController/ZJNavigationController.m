@@ -64,12 +64,12 @@
     } else {
         if ([viewController ZJ_prefresHiddenNavigationBar] == NO)
         {
-            if ([viewController ZJ_navType] == NavTypeNormal) {
+            if ([viewController ZJ_navType] == ZJNavTypeNormal) {
                 [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0],NSFontAttributeName:[UIFont systemFontOfSize:18]}];
-            }else if ([viewController ZJ_navType] == NavTypeBlue){
+            }else if ([viewController ZJ_navType] == ZJNavTypeCustomColor){
                 [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:18]}];
                  self.navigationBar.tintColor = UIColor.whiteColor;//设置导航栏按钮颜色
-            }else if ([viewController ZJ_navType] == NavTypeClear){
+            }else if ([viewController ZJ_navType] == ZJNavTypeClear){
                 [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:18]}];
             }
         }
@@ -106,11 +106,11 @@
                 viewController.navigationItem.hidesBackButton = YES;
             }
         }else{
-            if ([viewController ZJ_navType] == NavTypeNormal) {
+            if ([viewController ZJ_navType] == ZJNavTypeNormal) {
                 viewController.navigationItem.leftBarButtonItems = @[self.back];
-            }else if ([viewController ZJ_navType] == NavTypeBlue){
+            }else if ([viewController ZJ_navType] == ZJNavTypeCustomColor){
                 viewController.navigationItem.leftBarButtonItems = @[self.whiteBack];
-            }else if ([viewController ZJ_navType] == NavTypeClear){
+            }else if ([viewController ZJ_navType] == ZJNavTypeClear){
                 viewController.navigationItem.leftBarButtonItems = @[self.whiteBack];
             }
         }
@@ -127,7 +127,9 @@
     }
     
     // 解决 iPhone X tabbar push 时会瞬间上移的问题
-    if ([ZJDeviceInfo shareInstance].devicePlatform == ZJDeviceInfoPlatformiPhoneX || [ZJDeviceInfo shareInstance].devicePlatform == ZJDeviceInfoPlatformiPhoneSimulator) {
+    if ([ZJDeviceInfo shareInstance].devicePlatform == ZJDeviceInfoPlatformiPhoneX ||
+        [ZJDeviceInfo shareInstance].devicePlatform == ZJDeviceInfoPlatformiPhoneSimulator)
+    {
         CGRect frame = self.tabBarController.tabBar.frame;
         frame.origin.y = CGRectGetHeight([UIScreen mainScreen].bounds) - frame.size.height;
         self.tabBarController.tabBar.frame = frame;
