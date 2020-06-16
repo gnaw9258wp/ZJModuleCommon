@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZJModuleCommon"
-  spec.version      = "1.0.6"
+  spec.version      = "1.0.7"
   spec.summary      = "A short"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC 
-                               LZTool 是一个用于保存一些常用工具类的工具
+                               ZJModuleCommon 是一个用于保存一些常用工具类的工具
                         DESC
 
   spec.homepage     = "https://github.com/gnaw9258wp/ZJModuleCommon"
@@ -119,7 +119,6 @@ Pod::Spec.new do |spec|
       ss.dependency 'ZJModuleCommon/Define'
   end
 
-
   spec.subspec 'ZJHUD' do |ss|
       ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/ZJHUD/*.{h,m}'
       ss.dependency 'ZJModuleCommon/Category'
@@ -139,6 +138,11 @@ Pod::Spec.new do |spec|
       ss.dependency 'ZJModuleCommon/Category'
       ss.dependency 'YTKNetwork', '~> 2.1.4'
       ss.dependency 'Reachability', '~> 3.2'
+  end
+
+  spec.subspec 'Tool' do |ss|
+      ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/Tool/*.{h,m}'
+      ss.dependency 'AFNetworking'
   end
 
   #spec.exclude_files = "Classes/Exclude"

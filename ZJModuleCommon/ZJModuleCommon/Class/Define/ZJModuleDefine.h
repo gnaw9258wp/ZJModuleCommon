@@ -33,12 +33,12 @@
 //判断iPhoneX所有系列
 #define ZJIS_PhoneXAll (ZJIS_IPHONE_X || ZJIS_IPHONE_Xr || ZJIS_IPHONE_Xs_Max)
 #define ZJ_Height_NavContentBar 44.0f
-#define ZJ_Height_StatusBar (IS_PhoneXAll? 44.0 : 20.0)
-#define ZJ_Height_NavBar (IS_PhoneXAll ? 88.0 : 64.0)
-#define ZJ_Height_TabBar (IS_PhoneXAll ? 83.0 : 49.0)
-#define ZJ_Height_Away_TabBar (IS_PhoneXAll ? 34 : 0)
+#define ZJ_Height_StatusBar (ZJIS_PhoneXAll? 44.0 : 20.0)
+#define ZJ_Height_NavBar (ZJIS_PhoneXAll ? 88.0 : 64.0)
+#define ZJ_Height_TabBar (ZJIS_PhoneXAll ? 83.0 : 49.0)
+#define ZJ_Height_Away_TabBar (ZJIS_PhoneXAll ? 34 : 0)
 
-#define ZJScale ScreenWidth/375.0
+#define ZJScale ZJScreenWidth/375.0
 
 #define ZJStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 #define ZJNaviHeight (ZJIS_PhoneXAll ? 84.f : 64.f)

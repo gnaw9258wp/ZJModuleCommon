@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MBProgressHUD+ZJagon.h"
+#import "ZJModuleCommon.h"
 
 @interface ViewController ()
 
@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
 

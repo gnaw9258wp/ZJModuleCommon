@@ -19,8 +19,10 @@
 		F71AD0332498846800A5AC01 /* UIViewController+ZJAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AD02E2498846800A5AC01 /* UIViewController+ZJAdaptor.m */; };
 		F71AD0342498846800A5AC01 /* UIViewController+ZJDismiss.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AD02F2498846800A5AC01 /* UIViewController+ZJDismiss.m */; };
 		F71AD03724988E8600A5AC01 /* MBProgressHUD+ZJagon.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AD03624988E8600A5AC01 /* MBProgressHUD+ZJagon.m */; };
+		F71AD04D2498AF3D00A5AC01 /* NSFileManager+ZJFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AD04C2498AF3D00A5AC01 /* NSFileManager+ZJFileManager.m */; };
 		F726D80324974D32001EE797 /* MBProgressHUD+ZJagon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F726D80224974D32001EE797 /* MBProgressHUD+ZJagon.bundle */; };
 		F726D80524974EA4001EE797 /* tabbar_discoverhighlightgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = F726D80424974EA4001EE797 /* tabbar_discoverhighlightgif.gif */; };
+		F74D4E422498CBAD0032CDC8 /* ZJDownloadHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = F74D4E412498CBAD0032CDC8 /* ZJDownloadHandle.m */; };
 		F74DBB4B23D443C0003DB35C /* ZJSetAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F74DBB4923D443C0003DB35C /* ZJSetAuthManager.m */; };
 		F79A00B023D69EB500E0CD61 /* ZJMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = F79A00AF23D69EB500E0CD61 /* ZJMediator.m */; };
 		F79A00B323D6A01F00E0CD61 /* ZJMediator+Example.m in Sources */ = {isa = PBXBuildFile; fileRef = F79A00B223D6A01F00E0CD61 /* ZJMediator+Example.m */; };
@@ -66,9 +68,13 @@
 		F71AD0302498846800A5AC01 /* UIViewController+ZJDismiss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZJDismiss.h"; sourceTree = "<group>"; };
 		F71AD03524988E8500A5AC01 /* MBProgressHUD+ZJagon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ZJagon.h"; sourceTree = "<group>"; };
 		F71AD03624988E8600A5AC01 /* MBProgressHUD+ZJagon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+ZJagon.m"; sourceTree = "<group>"; };
+		F71AD04B2498AF3D00A5AC01 /* NSFileManager+ZJFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+ZJFileManager.h"; sourceTree = "<group>"; };
+		F71AD04C2498AF3D00A5AC01 /* NSFileManager+ZJFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+ZJFileManager.m"; sourceTree = "<group>"; };
 		F726D80224974D32001EE797 /* MBProgressHUD+ZJagon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "MBProgressHUD+ZJagon.bundle"; sourceTree = "<group>"; };
 		F726D80424974EA4001EE797 /* tabbar_discoverhighlightgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tabbar_discoverhighlightgif.gif; sourceTree = "<group>"; };
 		F726D94D24979754001EE797 /* ZJModuleCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJModuleCommon.h; sourceTree = "<group>"; };
+		F74D4E402498CBAD0032CDC8 /* ZJDownloadHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJDownloadHandle.h; sourceTree = "<group>"; };
+		F74D4E412498CBAD0032CDC8 /* ZJDownloadHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJDownloadHandle.m; sourceTree = "<group>"; };
 		F74DBB1B23D3E3C1003DB35C /* ZJModuleDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJModuleDefine.h; sourceTree = "<group>"; };
 		F74DBB4923D443C0003DB35C /* ZJSetAuthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSetAuthManager.m; sourceTree = "<group>"; };
 		F74DBB4A23D443C0003DB35C /* ZJSetAuthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSetAuthManager.h; sourceTree = "<group>"; };
@@ -204,6 +210,24 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		F71AD04A2498AF2500A5AC01 /* NSFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				F71AD04B2498AF3D00A5AC01 /* NSFileManager+ZJFileManager.h */,
+				F71AD04C2498AF3D00A5AC01 /* NSFileManager+ZJFileManager.m */,
+			);
+			path = NSFileManager;
+			sourceTree = "<group>";
+		};
+		F74D4E3F2498CBAD0032CDC8 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				F74D4E402498CBAD0032CDC8 /* ZJDownloadHandle.h */,
+				F74D4E412498CBAD0032CDC8 /* ZJDownloadHandle.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		F74DBB1A23D3E3B1003DB35C /* Define */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +295,7 @@
 		F7F9C53023D05D0000C50492 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				F74D4E3F2498CBAD0032CDC8 /* Tool */,
 				F79A00AD23D69E5C00E0CD61 /* ZJMediator */,
 				F74DBB4823D443C0003DB35C /* ZJSetAuthManager */,
 				F74DBB1A23D3E3B1003DB35C /* Define */,
@@ -288,6 +313,7 @@
 		F7F9C61C23D06F8100C50492 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F71AD04A2498AF2500A5AC01 /* NSFileManager */,
 				F71AD00424987C5300A5AC01 /* NSObject */,
 				F71ACFFE24987C5300A5AC01 /* NSString */,
 				F71AD00124987C5300A5AC01 /* UIApplication */,
@@ -453,6 +479,7 @@
 				F7F9C70C23D072D200C50492 /* ZJNavigationController.m in Sources */,
 				F79A00B023D69EB500E0CD61 /* ZJMediator.m in Sources */,
 				F7F9C51F23D05C5700C50492 /* ViewController.m in Sources */,
+				F71AD04D2498AF3D00A5AC01 /* NSFileManager+ZJFileManager.m in Sources */,
 				F7F9C70523D0712400C50492 /* ZJBaseRequest.m in Sources */,
 				F71AD0312498846800A5AC01 /* UIViewController+ZJNavigationViewController.m in Sources */,
 				F71AD0332498846800A5AC01 /* UIViewController+ZJAdaptor.m in Sources */,
@@ -467,6 +494,7 @@
 				F71AD0342498846800A5AC01 /* UIViewController+ZJDismiss.m in Sources */,
 				F7F9C70923D071B800C50492 /* ZJEnvironmentManager.m in Sources */,
 				F79A00B323D6A01F00E0CD61 /* ZJMediator+Example.m in Sources */,
+				F74D4E422498CBAD0032CDC8 /* ZJDownloadHandle.m in Sources */,
 				F71AD03724988E8600A5AC01 /* MBProgressHUD+ZJagon.m in Sources */,
 				F7F9C71523D0746300C50492 /* ZJDeviceInfo.m in Sources */,
 				F7F9C52A23D05C5800C50492 /* main.m in Sources */,
