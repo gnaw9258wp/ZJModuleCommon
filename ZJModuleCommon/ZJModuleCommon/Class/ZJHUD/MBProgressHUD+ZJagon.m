@@ -8,8 +8,8 @@
 
 #import "MBProgressHUD+ZJagon.h"
 #import "UIApplication+ZJVCManager.h"
-#import "UIColor+ZJHEX.h"
 #import "UIImage+GIF.h"
+#import "UIColor+JKHEX.h"
 @implementation MBProgressHUD (ZJagon)
 
 + (MBProgressHUD*)ZJ_createMBProgressHUDviewWithMessage:(NSString*)message isWindiw:(BOOL)isWindow
@@ -97,7 +97,7 @@
 {
     MBProgressHUD *hud  =  [self ZJ_createMBProgressHUDviewWithMessage:message isWindiw:isWindow customView:customView];
     hud.mode = MBProgressHUDModeIndeterminate;
-    hud.bezelView.backgroundColor = [UIColor ZJ_colorWithHexString:@"#f0f5f7" alpha:0.9];
+    hud.bezelView.backgroundColor = [UIColor jk_colorWithHex:0xf0f5f7 andAlpha:0.9];
     hud.label.textColor = [UIColor blackColor];
     hud.label.font = [UIFont systemFontOfSize:14];
     hud.activityIndicatorColor = [UIColor blackColor];

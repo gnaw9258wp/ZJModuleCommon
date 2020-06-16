@@ -25,7 +25,6 @@
 #import "NSObject+ZJModelToDictionary.h"
 #import "NSString+ZJUrlEncode.h"
 #import "UIApplication+ZJVCManager.h"
-#import "UIColor+ZJHEX.h"
 #import "UIImage+ZJColor.h"
 #import "UITableView+ZJAdaptor.h"
 #import "UIViewController+ZJNavigationViewController.h"

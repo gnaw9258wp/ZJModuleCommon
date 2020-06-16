@@ -11,7 +11,6 @@
 		F71AD01624987FD400A5AC01 /* NSObject+ZJModelToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AD01524987FD400A5AC01 /* NSObject+ZJModelToDictionary.m */; };
 		F71AD0192498807600A5AC01 /* NSString+ZJUrlEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AD0172498807600A5AC01 /* NSString+ZJUrlEncode.m */; };
 		F71AD01C249880BB00A5AC01 /* UIApplication+ZJVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AD01A249880BB00A5AC01 /* UIApplication+ZJVCManager.m */; };
-		F71AD01F249880F200A5AC01 /* UIColor+ZJHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AD01E249880F200A5AC01 /* UIColor+ZJHEX.m */; };
 		F71AD0252498814600A5AC01 /* UIImage+ZJColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AD0242498814600A5AC01 /* UIImage+ZJColor.m */; };
 		F71AD0282498845800A5AC01 /* UITableView+ZJAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AD0272498845800A5AC01 /* UITableView+ZJAdaptor.m */; };
 		F71AD0312498846800A5AC01 /* UIViewController+ZJNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F71AD02A2498846600A5AC01 /* UIViewController+ZJNavigationViewController.m */; };
@@ -52,8 +51,6 @@
 		F71AD0182498807600A5AC01 /* NSString+ZJUrlEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZJUrlEncode.h"; sourceTree = "<group>"; };
 		F71AD01A249880BB00A5AC01 /* UIApplication+ZJVCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ZJVCManager.m"; sourceTree = "<group>"; };
 		F71AD01B249880BB00A5AC01 /* UIApplication+ZJVCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ZJVCManager.h"; sourceTree = "<group>"; };
-		F71AD01D249880F200A5AC01 /* UIColor+ZJHEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZJHEX.h"; sourceTree = "<group>"; };
-		F71AD01E249880F200A5AC01 /* UIColor+ZJHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZJHEX.m"; sourceTree = "<group>"; };
 		F71AD0232498814600A5AC01 /* UIImage+ZJColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZJColor.h"; sourceTree = "<group>"; };
 		F71AD0242498814600A5AC01 /* UIImage+ZJColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZJColor.m"; sourceTree = "<group>"; };
 		F71AD0262498845700A5AC01 /* UITableView+ZJAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+ZJAdaptor.h"; sourceTree = "<group>"; };
@@ -201,15 +198,6 @@
 			path = NSObject;
 			sourceTree = "<group>";
 		};
-		F71AD00724987C5300A5AC01 /* UIColor */ = {
-			isa = PBXGroup;
-			children = (
-				F71AD01D249880F200A5AC01 /* UIColor+ZJHEX.h */,
-				F71AD01E249880F200A5AC01 /* UIColor+ZJHEX.m */,
-			);
-			path = UIColor;
-			sourceTree = "<group>";
-		};
 		F71AD04A2498AF2500A5AC01 /* NSFileManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,7 +305,6 @@
 				F71AD00424987C5300A5AC01 /* NSObject */,
 				F71ACFFE24987C5300A5AC01 /* NSString */,
 				F71AD00124987C5300A5AC01 /* UIApplication */,
-				F71AD00724987C5300A5AC01 /* UIColor */,
 				F71ACFFB24987C5300A5AC01 /* UIImage */,
 				F71ACFF824987C5300A5AC01 /* UITableView */,
 				F71ACFEF24987C5300A5AC01 /* UIViewController */,
@@ -483,7 +470,6 @@
 				F7F9C70523D0712400C50492 /* ZJBaseRequest.m in Sources */,
 				F71AD0312498846800A5AC01 /* UIViewController+ZJNavigationViewController.m in Sources */,
 				F71AD0332498846800A5AC01 /* UIViewController+ZJAdaptor.m in Sources */,
-				F71AD01F249880F200A5AC01 /* UIColor+ZJHEX.m in Sources */,
 				F7F9C51923D05C5700C50492 /* AppDelegate.m in Sources */,
 				F71AD0192498807600A5AC01 /* NSString+ZJUrlEncode.m in Sources */,
 				F71AD0282498845800A5AC01 /* UITableView+ZJAdaptor.m in Sources */,
