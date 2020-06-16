@@ -59,7 +59,7 @@ static ZJSetAuthManager *instance;
 
                 } else if (status == PHAuthorizationStatusDenied || status == ALAuthorizationStatusRestricted) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"相册权限未开启,请到[设置]中对“%@”授权",APPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+                        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"相册权限未开启,请到[设置]中对“%@”授权",ZJAPPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
                         alert.tag = 100;
                         [alert show];
                     });
@@ -74,7 +74,7 @@ static ZJSetAuthManager *instance;
                     });
                 } else if (status == ALAuthorizationStatusDenied || status == ALAuthorizationStatusRestricted) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"相册权限未开启,请到[设置]中对“%@”授权",APPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+                        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"相册权限未开启,请到[设置]中对“%@”授权",ZJAPPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
                         alert.tag = 100;
                         [alert show];
                     });
@@ -88,7 +88,7 @@ static ZJSetAuthManager *instance;
             AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
             if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"相机权限未开启,请到[设置]中对“%@”授权",APPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"相机权限未开启,请到[设置]中对“%@”授权",ZJAPPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
                     alert.tag = 101;
                     [alert show];
                 });
@@ -104,7 +104,7 @@ static ZJSetAuthManager *instance;
                     }else
                     {
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"相机权限未开启,请到[设置]中对“%@”授权",APPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+                            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"相机权限未开启,请到[设置]中对“%@”授权",ZJAPPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
                             alert.tag = 101;
                             [alert show];
                         });
@@ -124,7 +124,7 @@ static ZJSetAuthManager *instance;
             if (![CLLocationManager locationServicesEnabled]) {//定位功能没有开
 
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"定位服务未开启" message:[NSString stringWithFormat:@"定位服务未开启，请进入系统【设置】>【隐私】>【定位服务】中打开开关，并允许%@使用定位服务",APPName] delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+                    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"定位服务未开启" message:[NSString stringWithFormat:@"定位服务未开启，请进入系统【设置】>【隐私】>【定位服务】中打开开关，并允许%@使用定位服务",ZJAPPName] delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
                     [alert show];
                 });
                 
@@ -132,7 +132,7 @@ static ZJSetAuthManager *instance;
                 if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted)
                 {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                       UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"定位服务未开启" message:[NSString stringWithFormat:@"定位服务未开启，请进入系统【设置】>【隐私】>【定位服务】中打开开关，并允许%@使用定位服务",APPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+                       UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"定位服务未开启" message:[NSString stringWithFormat:@"定位服务未开启，请进入系统【设置】>【隐私】>【定位服务】中打开开关，并允许%@使用定位服务",ZJAPPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
                        alert.tag = 102;
                        [alert show];
                     });
@@ -167,7 +167,7 @@ static ZJSetAuthManager *instance;
                         }else
                         {
                             dispatch_async(dispatch_get_main_queue(), ^{
-                                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"麦克风权限未开启,请到[设置]中对“%@”授权",APPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+                                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"麦克风权限未开启,请到[设置]中对“%@”授权",ZJAPPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
                                 alert.tag = 103;
                                 [alert show];
                             });
@@ -177,7 +177,7 @@ static ZJSetAuthManager *instance;
                 }
                 case AVAudioSessionRecordPermissionDenied: {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"麦克风权限未开启,请到[设置]中对“%@”授权",APPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+                        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"麦克风权限未开启,请到[设置]中对“%@”授权",ZJAPPName] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
                         alert.tag = 103;
                         [alert show];
                     });

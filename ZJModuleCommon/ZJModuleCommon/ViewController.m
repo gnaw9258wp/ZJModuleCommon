@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MBProgressHUD+JDragon.h"
+#import "MBProgressHUD+ZJagon.h"
 
 @interface ViewController ()
 
@@ -21,7 +21,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [MBProgressHUD showCustomGifLoadingInWindowMessage:@"tabbar_discoverhighlightgif" iconName:@"" timer:2];
+    [MBProgressHUD ZJ_showCustomGifLoadingInWindowMessage:@"tabbar_discoverhighlightgif" iconName:@"" timer:2];
 }
 
 @end

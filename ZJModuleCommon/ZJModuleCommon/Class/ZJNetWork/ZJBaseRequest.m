@@ -8,8 +8,8 @@
 
 #import "ZJBaseRequest.h"
 #import "ZJEnvironmentManager.h"
-#import "NSObject+ModelToDictionary.h"
-#import "NSString+UrlEncode.h"
+#import "NSObject+ZJModelToDictionary.h"
+#import "NSString+ZJUrlEncode.h"
 #import <objc/runtime.h>
 
 @implementation ZJBaseRequest
@@ -67,11 +67,11 @@
             [mdic setObject:[self valueForKey:key] forKey:ocName];
         } else if([[self valueForKey:key] isKindOfClass:[NSArray class]]) {
             NSObject *obj = [self valueForKey:key];
-            NSArray *arr = [obj modelToArray];
+            NSArray *arr = [obj ZJ_modelToArray];
             [mdic setObject:arr forKey:key];
         } else if ([self valueForKey:key] != nil && ([[self valueForKey:key] isKindOfClass:[NSObject class]])){
             NSObject *obj = [self valueForKey:key];
-            NSDictionary *dic = [obj modelToDictionary];
+            NSDictionary *dic = [obj ZJ_modelToDictionary];
             if (dic) {
                 [mdic setObject:dic forKey:key];
             }
@@ -118,7 +118,7 @@
                 NSString *key = arrayKey[i];
                 NSString *value = requestArgument[key];
                 if (key && value) {
-                    urlRequest = [urlRequest urlAddCompnentForValue:value key:key];
+                    urlRequest = [urlRequest ZJ_urlAddCompnentForValue:value key:key];
                 }
             }
         }

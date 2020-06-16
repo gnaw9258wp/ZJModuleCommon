@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIViewController+BGNavigationViewController.h"
+#import "UIViewController+ZJNavigationViewController.h"
 
 
 @interface ZJNavigationController : UINavigationController

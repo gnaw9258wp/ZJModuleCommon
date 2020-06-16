@@ -4,10 +4,10 @@
 
 
 #import "ZJNavigationController.h"
-#import "UIViewController+interfaceOrientation.h"
-#import "DeviceInfo.h"
-#import "UIImage+Color.h"
-#import "UIColor+HEX.h"
+#import "UIViewController+ZJInterfaceOrientation.h"
+#import "ZJDeviceInfo.h"
+#import "UIImage+ZJColor.h"
+#import "UIColor+JKHEX.h"
 
 @interface ZJNavigationController ()<UINavigationBarDelegate, UIGestureRecognizerDelegate, UINavigationControllerDelegate>
 
@@ -42,7 +42,7 @@
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     if (gestureRecognizer == self.interactivePopGestureRecognizer) {
         if (self.viewControllers.count >= 2) {
-            return [self.topViewController bg_interactivePopGestureEnabled];
+            return [self.topViewController ZJ_interactivePopGestureEnabled];
         } else {
             return NO;
         }
@@ -57,19 +57,19 @@
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     //导航栏标题处理
-    [self setNavigationBarHidden:[viewController bg_prefresHiddenNavigationBar] animated:animated];
+    [self setNavigationBarHidden:[viewController ZJ_prefresHiddenNavigationBar] animated:animated];
 
-    if (viewController.bg_titleTextAttributes) {
-        [self.navigationBar setTitleTextAttributes:viewController.bg_titleTextAttributes];
+    if (viewController.ZJ_titleTextAttributes) {
+        [self.navigationBar setTitleTextAttributes:viewController.ZJ_titleTextAttributes];
     } else {
-        if ([viewController bg_prefresHiddenNavigationBar] == NO)
+        if ([viewController ZJ_prefresHiddenNavigationBar] == NO)
         {
-            if ([viewController bg_navType] == NavTypeNormal) {
+            if ([viewController ZJ_navType] == NavTypeNormal) {
                 [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0],NSFontAttributeName:[UIFont systemFontOfSize:18]}];
-            }else if ([viewController bg_navType] == NavTypeBlue){
+            }else if ([viewController ZJ_navType] == NavTypeBlue){
                 [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:18]}];
                  self.navigationBar.tintColor = UIColor.whiteColor;//设置导航栏按钮颜色
-            }else if ([viewController bg_navType] == NavTypeClear){
+            }else if ([viewController ZJ_navType] == NavTypeClear){
                 [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:18]}];
             }
         }
@@ -93,24 +93,24 @@
         viewController.hidesBottomBarWhenPushed = YES;
     }
     
-    if (viewController.navigationItem.leftBarButtonItems == nil && (self.viewControllers.count > 0 || [viewController bg_forceShowBackButtonItem] == YES) && [viewController bg_showBackButtonItem] == YES)
+    if (viewController.navigationItem.leftBarButtonItems == nil && (self.viewControllers.count > 0 || [viewController ZJ_forceShowBackButtonItem] == YES) && [viewController ZJ_showBackButtonItem] == YES)
     {
         viewController.navigationItem.hidesBackButton = NO;
-        if ([viewController bg_backBarButtonItems] != nil)
+        if ([viewController ZJ_backBarButtonItems] != nil)
         {
-            if ([viewController bg_backBarButtonItems].count > 0)
+            if ([viewController ZJ_backBarButtonItems].count > 0)
             {
-                viewController.navigationItem.leftBarButtonItems = [viewController bg_backBarButtonItems];
+                viewController.navigationItem.leftBarButtonItems = [viewController ZJ_backBarButtonItems];
             }else{
                 viewController.navigationItem.leftBarButtonItems = nil;
                 viewController.navigationItem.hidesBackButton = YES;
             }
         }else{
-            if ([viewController bg_navType] == NavTypeNormal) {
+            if ([viewController ZJ_navType] == NavTypeNormal) {
                 viewController.navigationItem.leftBarButtonItems = @[self.back];
-            }else if ([viewController bg_navType] == NavTypeBlue){
+            }else if ([viewController ZJ_navType] == NavTypeBlue){
                 viewController.navigationItem.leftBarButtonItems = @[self.whiteBack];
-            }else if ([viewController bg_navType] == NavTypeClear){
+            }else if ([viewController ZJ_navType] == NavTypeClear){
                 viewController.navigationItem.leftBarButtonItems = @[self.whiteBack];
             }
         }
@@ -127,7 +127,7 @@
     }
     
     // 解决 iPhone X tabbar push 时会瞬间上移的问题
-    if ([DeviceInfo shareInstance].devicePlatform == DeviceInfoPlatformiPhoneX || [DeviceInfo shareInstance].devicePlatform == DeviceInfoPlatformiPhoneSimulator) {
+    if ([ZJDeviceInfo shareInstance].devicePlatform == ZJDeviceInfoPlatformiPhoneX || [ZJDeviceInfo shareInstance].devicePlatform == ZJDeviceInfoPlatformiPhoneSimulator) {
         CGRect frame = self.tabBarController.tabBar.frame;
         frame.origin.y = CGRectGetHeight([UIScreen mainScreen].bounds) - frame.size.height;
         self.tabBarController.tabBar.frame = frame;
@@ -136,8 +136,8 @@
 
 #pragma mark - events Methods
 - (void)backAction{
-    if ([self.topViewController respondsToSelector:@selector(bg_backButtonAction)]) {
-        [self.topViewController performSelector:@selector(bg_backButtonAction)];
+    if ([self.topViewController respondsToSelector:@selector(ZJ_backButtonAction)]) {
+        [self.topViewController performSelector:@selector(ZJ_backButtonAction)];
     } else {
         [self popViewControllerAnimated:YES];
     }
@@ -146,10 +146,10 @@
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
     switch (operation) {
         case UINavigationControllerOperationPush:
-            return [toVC pushAnimation];
+            return [toVC ZJ_pushAnimation];
             break;
         case UINavigationControllerOperationPop:
-            return [fromVC popAnimation];
+            return [fromVC ZJ_popAnimation];
             break;
         default:
             return nil;
@@ -159,23 +159,23 @@
 
 #pragma mark - overwrite Methods
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated {
-    UIViewController *popToVC = self.topViewController.bg_previousViewController;
+    UIViewController *popToVC = self.topViewController.ZJ_previousViewController;
     
     if (popToVC && [self.viewControllers containsObject:popToVC]) {
         NSUInteger num = [self.viewControllers indexOfObject:popToVC];
         for (int i = (int)self.viewControllers.count - 1; i > num; i--) {
             UIViewController *vcWillPop = [self.viewControllers objectAtIndex:i];
-            if ([vcWillPop respondsToSelector:@selector(bg_preDeallocInNav)]) {
-                [vcWillPop performSelector:@selector(bg_preDeallocInNav)];
+            if ([vcWillPop respondsToSelector:@selector(ZJ_preDeallocInNav)]) {
+                [vcWillPop performSelector:@selector(ZJ_preDeallocInNav)];
             }
         }
         
-        [self popToViewController:self.topViewController.bg_previousViewController animated:animated];
+        [self popToViewController:self.topViewController.ZJ_previousViewController animated:animated];
         return nil;
     }
     
-    if ([self.topViewController respondsToSelector:@selector(bg_preDeallocInNav)]) {
-        [self.topViewController performSelector:@selector(bg_preDeallocInNav)];
+    if ([self.topViewController respondsToSelector:@selector(ZJ_preDeallocInNav)]) {
+        [self.topViewController performSelector:@selector(ZJ_preDeallocInNav)];
     }
     return [super popViewControllerAnimated:animated];
 }

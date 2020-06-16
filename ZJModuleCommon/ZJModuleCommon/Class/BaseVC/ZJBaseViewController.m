@@ -7,9 +7,10 @@
 //
 
 #import "ZJBaseViewController.h"
-#import "UIViewController+BGNavigationViewController.h"
-#import "UIImage+Color.h"
-#import "UIColor+HEX.h"
+#import "UIViewController+ZJNavigationViewController.h"
+#import "UIImage+ZJColor.h"
+#import "UIImage+JKColor.h"
+#import "UIColor+JKHEX.h"
 #import "ZJModuleDefine.h"
 @interface ZJBaseViewController ()
 
@@ -29,34 +30,34 @@
 
 - (void)configureNav{
     
-    if ([self bg_prefresHiddenNavigationBar])
+    if ([self ZJ_prefresHiddenNavigationBar])
     {
         return;
     }
     
-    if ([self bg_navType] == NavTypeNormal)
+    if ([self ZJ_navType] == NavTypeNormal)
     {
-        UIImage *whiteImage = [UIImage imageFromColor:[UIColor whiteColor] size:CGSizeMake(UIScreen.mainScreen.bounds.size.width, kTopHeight)];
+        UIImage *whiteImage = [UIImage ZJ_imageFromColor:[UIColor whiteColor] size:CGSizeMake(UIScreen.mainScreen.bounds.size.width, ZJTopHeight)];
         [self.navigationController.navigationBar setBackgroundImage:whiteImage forBarMetrics:UIBarMetricsDefault];
-        if (self.bg_lineColor)
+        if (self.ZJ_lineColor)
         {
-            UIImage *lineImage = [UIImage imageFromColor:self.bg_lineColor size:CGSizeMake([UIScreen mainScreen].bounds.size.width, 0.5)];
+            UIImage *lineImage = [UIImage ZJ_imageFromColor:self.ZJ_lineColor size:CGSizeMake([UIScreen mainScreen].bounds.size.width, 0.5)];
             [self.navigationController.navigationController.navigationBar setShadowImage:lineImage];
         }else
         {
-            UIImage *lineImage = [UIImage imageFromColor:[UIColor clearColor] size:CGSizeMake([UIScreen mainScreen].bounds.size.width, 0.5)];
+            UIImage *lineImage = [UIImage ZJ_imageFromColor:[UIColor clearColor] size:CGSizeMake([UIScreen mainScreen].bounds.size.width, 0.5)];
             [self.navigationController.navigationBar setShadowImage:lineImage];
         }
-    }else if ([self bg_navType] == NavTypeBlue)
+    }else if ([self ZJ_navType] == NavTypeBlue)
     {
-        UIImage *blueImage = [UIImage imageWithColor:[UIColor blueColor]];
+        UIImage *blueImage = [UIImage jk_imageWithColor:[UIColor blueColor]];
         [self.navigationController.navigationBar setBackgroundImage:blueImage forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-    }else if ([self bg_navType] == NavTypeClear)
+    }else if ([self ZJ_navType] == NavTypeClear)
     {
         self.navigationController.navigationBar.translucent = YES;
         self.navigationController.navigationBar.barTintColor = UIColor.clearColor;
-        UIImage *clearImage = [UIImage imageWithColor:[UIColor clearColor]];
+        UIImage *clearImage = [UIImage jk_imageWithColor:[UIColor clearColor]];
         [self.navigationController.navigationBar setBackgroundImage:clearImage forBarMetrics:UIBarMetricsDefault];
         [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     }

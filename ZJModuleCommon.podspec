@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZJModuleCommon"
-  spec.version      = "1.0.5"
+  spec.version      = "1.0.6"
   spec.summary      = "A short"
 
   # This description is used to generate tags and improve search results.
@@ -106,6 +106,7 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'Category' do |ss|
       ss.source_files = 'ZJModuleCommon/ZJModuleCommon/Class/Category/**/**/*.{h,m}'
+      ss.dependency 'JKCategories', '~> 1.9'
   end
 
   spec.subspec 'Environment' do |ss|

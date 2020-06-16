@@ -9,10 +9,8 @@ target 'ZJModuleCommon' do
  pod 'MBProgressHUD', '~> 1.1.0'
  pod 'YTKNetwork', '~> 2.1.4'
  pod 'Reachability', '~> 3.2'
-
+ pod 'JKCategories', '~> 1.9'
 end
-
-
 
 # 加入这些配置
 post_install do |installer|
